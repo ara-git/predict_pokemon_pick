@@ -8,7 +8,7 @@ import json
 
 def process_pokedex():
     # JSONファイルを読み込む
-    with open("./data/input/pokedex.json", "r", encoding="utf-8") as file:
+    with open("./data/input/pokedex/pokedex.json", "r", encoding="utf-8") as file:
         pokedex = json.load(file)
 
     result_list = []
