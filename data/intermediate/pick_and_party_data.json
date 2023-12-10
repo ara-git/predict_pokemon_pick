@@ -1,0 +1,3881 @@
+{
+    "0": {
+        "opponent_pick": [
+            "Tornadus",
+            "Slaking",
+            "Weezing",
+            "Sneasler"
+        ],
+        "opponent_start_pick": [
+            "Slaking",
+            "Weezing"
+        ],
+        "my_party": [
+            "Chien-Pao",
+            "Roaring Moon",
+            "Flutter Mane",
+            "Sinistcha",
+            "Iron Hands",
+            "Chi-Yu"
+        ]
+    },
+    "1": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Iron Hands",
+            "Roaring Moon",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Iron Hands",
+            "Roaring Moon"
+        ],
+        "my_party": [
+            "Slaking",
+            "Weezing",
+            "Clefairy",
+            "Tornadus",
+            "Urshifu-*",
+            "Sneasler"
+        ]
+    },
+    "2": {
+        "opponent_pick": [
+            "Glalie",
+            "Salamence",
+            "Stonjourner",
+            "Sinistcha-Masterpiece"
+        ],
+        "opponent_start_pick": [
+            "Salamence",
+            "Stonjourner"
+        ],
+        "my_party": [
+            "Ogerpon-Wellspring",
+            "Iron Hands",
+            "Tornadus",
+            "Gholdengo",
+            "Flutter Mane",
+            "Chien-Pao"
+        ]
+    },
+    "3": {
+        "opponent_pick": [
+            "Tornadus",
+            "Ogerpon-Wellspring",
+            "Iron Hands",
+            "Chien-Pao"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Salamence",
+            "Weezing",
+            "Sinistcha-Masterpiece",
+            "Stonjourner",
+            "Roaring Moon",
+            "Glalie"
+        ]
+    },
+    "4": {
+        "opponent_pick": [
+            "Urshifu-Rapid-Strike",
+            "Ogerpon-Wellspring",
+            "Fezandipiti",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Fezandipiti",
+            "Ogerpon-Wellspring"
+        ],
+        "my_party": [
+            "Lilligant-Hisui",
+            "Torkoal",
+            "Heatran",
+            "Iron Hands",
+            "Flutter Mane",
+            "Landorus-Therian"
+        ]
+    },
+    "5": {
+        "opponent_pick": [
+            "Lilligant-Hisui",
+            "Flutter Mane",
+            "Iron Hands",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Iron Hands",
+            "Flutter Mane"
+        ],
+        "my_party": [
+            "Fezandipiti",
+            "Ogerpon-Wellspring",
+            "Flutter Mane",
+            "Urshifu-*",
+            "Arcanine-Hisui",
+            "Rillaboom"
+        ]
+    },
+    "6": {
+        "opponent_pick": [
+            "Landorus-Therian",
+            "Rillaboom",
+            "Ogerpon-Wellspring",
+            "Iron Valiant"
+        ],
+        "opponent_start_pick": [
+            "Landorus-Therian",
+            "Iron Valiant"
+        ],
+        "my_party": [
+            "Iron Hands",
+            "Sinistcha",
+            "Articuno-Galar",
+            "Heatran",
+            "Hydreigon",
+            "Ogerpon-Wellspring"
+        ]
+    },
+    "7": {
+        "opponent_pick": [
+            "Sinistcha",
+            "Hydreigon",
+            "Iron Hands",
+            "Heatran"
+        ],
+        "opponent_start_pick": [
+            "Iron Hands",
+            "Hydreigon"
+        ],
+        "my_party": [
+            "Landorus-Therian",
+            "Moltres-Galar",
+            "Rillaboom",
+            "Iron Valiant",
+            "Ogerpon-Wellspring",
+            "Goodra-Hisui"
+        ]
+    },
+    "8": {
+        "opponent_pick": [
+            "Gholdengo",
+            "Flutter Mane",
+            "Landorus-Therian",
+            "Amoonguss"
+        ],
+        "opponent_start_pick": [
+            "Landorus-Therian",
+            "Amoonguss"
+        ],
+        "my_party": [
+            "Regieleki",
+            "Weezing",
+            "Roaring Moon",
+            "Slaking",
+            "Clefairy",
+            "Sinistcha"
+        ]
+    },
+    "9": {
+        "opponent_pick": [
+            "Sinistcha",
+            "Weezing",
+            "Slaking",
+            "Roaring Moon"
+        ],
+        "opponent_start_pick": [
+            "Weezing",
+            "Roaring Moon"
+        ],
+        "my_party": [
+            "Gholdengo",
+            "Regieleki",
+            "Flutter Mane",
+            "Heatran",
+            "Landorus-Therian",
+            "Amoonguss"
+        ]
+    },
+    "10": {
+        "opponent_pick": [
+            "Spectrier",
+            "Iron Jugulis",
+            "Morpeko",
+            "Urshifu-Rapid-Strike"
+        ],
+        "opponent_start_pick": [
+            "Urshifu-Rapid-Strike",
+            "Morpeko"
+        ],
+        "my_party": [
+            "Electrode-Hisui",
+            "Hydreigon",
+            "Ursaluna-Bloodmoon",
+            "Gothitelle",
+            "Misdreavus",
+            "Munkidori"
+        ]
+    },
+    "11": {
+        "opponent_pick": [
+            "Gothitelle",
+            "Misdreavus",
+            "Hydreigon",
+            "Ursaluna-Bloodmoon"
+        ],
+        "opponent_start_pick": [
+            "Ursaluna-Bloodmoon",
+            "Hydreigon"
+        ],
+        "my_party": [
+            "Morpeko",
+            "Urshifu-*",
+            "Clodsire",
+            "Spectrier",
+            "Clefable",
+            "Iron Jugulis"
+        ]
+    },
+    "12": {
+        "opponent_pick": [
+            "Spectrier",
+            "Iron Jugulis",
+            "Morpeko",
+            "Urshifu-Rapid-Strike"
+        ],
+        "opponent_start_pick": [
+            "Morpeko",
+            "Spectrier"
+        ],
+        "my_party": [
+            "Electrode-Hisui",
+            "Hydreigon",
+            "Ursaluna-Bloodmoon",
+            "Gothitelle",
+            "Misdreavus",
+            "Munkidori"
+        ]
+    },
+    "13": {
+        "opponent_pick": [
+            "Gothitelle",
+            "Misdreavus",
+            "Hydreigon",
+            "Electrode-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Electrode-Hisui",
+            "Hydreigon"
+        ],
+        "my_party": [
+            "Morpeko",
+            "Urshifu-*",
+            "Clodsire",
+            "Spectrier",
+            "Clefable",
+            "Iron Jugulis"
+        ]
+    },
+    "14": {
+        "opponent_pick": [
+            "Spectrier",
+            "Iron Jugulis",
+            "Morpeko",
+            "Urshifu-Rapid-Strike"
+        ],
+        "opponent_start_pick": [
+            "Morpeko",
+            "Spectrier"
+        ],
+        "my_party": [
+            "Electrode-Hisui",
+            "Hydreigon",
+            "Ursaluna-Bloodmoon",
+            "Gothitelle",
+            "Misdreavus",
+            "Munkidori"
+        ]
+    },
+    "15": {
+        "opponent_pick": [
+            "Gothitelle",
+            "Munkidori",
+            "Ursaluna-Bloodmoon",
+            "Misdreavus"
+        ],
+        "opponent_start_pick": [
+            "Gothitelle",
+            "Munkidori"
+        ],
+        "my_party": [
+            "Morpeko",
+            "Urshifu-*",
+            "Clodsire",
+            "Spectrier",
+            "Clefable",
+            "Iron Jugulis"
+        ]
+    },
+    "16": {
+        "opponent_pick": [
+            "Regidrago",
+            "Armarouge",
+            "Indeedee-F",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Regidrago",
+            "Indeedee-F"
+        ],
+        "my_party": [
+            "Rillaboom",
+            "Flutter Mane",
+            "Ogerpon-Hearthflame",
+            "Tornadus",
+            "Urshifu-*",
+            "Weezing"
+        ]
+    },
+    "17": {
+        "opponent_pick": [
+            "Tornadus",
+            "Weezing",
+            "Rillaboom",
+            "Urshifu"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Rillaboom"
+        ],
+        "my_party": [
+            "Regidrago",
+            "Indeedee-F",
+            "Armarouge",
+            "Ursaluna",
+            "Torkoal",
+            "Lilligant-Hisui"
+        ]
+    },
+    "18": {
+        "opponent_pick": [
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Chi-Yu",
+            "Landorus"
+        ],
+        "my_party": [
+            "Weezing-Galar",
+            "Slaking",
+            "Farigiraf",
+            "Vikavolt",
+            "Empoleon",
+            "Ninetales-Alola"
+        ]
+    },
+    "19": {
+        "opponent_pick": [
+            "Farigiraf",
+            "Vikavolt",
+            "Empoleon",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Empoleon",
+            "Ninetales-Alola"
+        ],
+        "my_party": [
+            "Azumarill",
+            "Decidueye-Hisui",
+            "Chi-Yu",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ]
+    },
+    "20": {
+        "opponent_pick": [
+            "Regieleki",
+            "Landorus-Therian",
+            "Amoonguss",
+            "Gholdengo"
+        ],
+        "opponent_start_pick": [
+            "Landorus-Therian",
+            "Regieleki"
+        ],
+        "my_party": [
+            "Ogerpon-Wellspring",
+            "Iron Hands",
+            "Scizor",
+            "Tornadus",
+            "Flutter Mane",
+            "Arcanine-Hisui"
+        ]
+    },
+    "21": {
+        "opponent_pick": [
+            "Ogerpon-Wellspring",
+            "Iron Hands",
+            "Scizor",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Arcanine-Hisui",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Gholdengo",
+            "Regieleki",
+            "Flutter Mane",
+            "Heatran",
+            "Landorus-Therian",
+            "Amoonguss"
+        ]
+    },
+    "22": {
+        "opponent_pick": [
+            "Gholdengo",
+            "Grimmsnarl",
+            "Chandelure"
+        ],
+        "opponent_start_pick": [
+            "Grimmsnarl",
+            "Chandelure"
+        ],
+        "my_party": [
+            "Sableye",
+            "Iron Hands",
+            "Arcanine-Hisui",
+            "Rillaboom",
+            "Landorus-Therian",
+            "Torkoal"
+        ]
+    },
+    "23": {
+        "opponent_pick": [
+            "Iron Hands",
+            "Sableye",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Chandelure",
+            "Grimmsnarl",
+            "Ogerpon-Cornerstone",
+            "Iron Hands",
+            "Gholdengo",
+            "Iron Bundle"
+        ]
+    },
+    "24": {
+        "opponent_pick": [
+            "Tinkaton",
+            "Muk-Alola",
+            "Heatran",
+            "Oranguru"
+        ],
+        "opponent_start_pick": [
+            "Tinkaton",
+            "Oranguru"
+        ],
+        "my_party": [
+            "Indeedee-F",
+            "Armarouge",
+            "Gallade",
+            "Torkoal",
+            "Dondozo",
+            "Tatsugiri"
+        ]
+    },
+    "25": {
+        "opponent_pick": [
+            "Gallade",
+            "Armarouge",
+            "Indeedee-F",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Indeedee-F",
+            "Armarouge"
+        ],
+        "my_party": [
+            "Muk-Alola",
+            "Heatran",
+            "Tinkaton",
+            "Ogerpon-Wellspring",
+            "Dudunsparce-*",
+            "Oranguru"
+        ]
+    },
+    "26": {
+        "opponent_pick": [
+            "Charjabug",
+            "Regidrago",
+            "Urshifu-Rapid-Strike",
+            "Amoonguss"
+        ],
+        "opponent_start_pick": [
+            "Regidrago",
+            "Amoonguss"
+        ],
+        "my_party": [
+            "Charjabug",
+            "Flutter Mane",
+            "Landorus-Therian",
+            "Farigiraf",
+            "Ogerpon-Wellspring",
+            "Tornadus"
+        ]
+    },
+    "27": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Charjabug",
+            "Landorus-Therian",
+            "Farigiraf"
+        ],
+        "opponent_start_pick": [
+            "Charjabug",
+            "Landorus-Therian"
+        ],
+        "my_party": [
+            "Regidrago",
+            "Amoonguss",
+            "Moltres",
+            "Urshifu-*",
+            "Charjabug",
+            "Scizor"
+        ]
+    },
+    "28": {
+        "opponent_pick": [
+            "Armarouge",
+            "Indeedee-F",
+            "Chien-Pao",
+            "Rotom-Wash"
+        ],
+        "opponent_start_pick": [
+            "Chien-Pao",
+            "Indeedee-F"
+        ],
+        "my_party": [
+            "Sableye",
+            "Landorus",
+            "Luvdisc",
+            "Magikarp"
+        ]
+    },
+    "29": {
+        "opponent_pick": [
+            "Landorus",
+            "Sableye"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Landorus"
+        ],
+        "my_party": [
+            "Armarouge",
+            "Indeedee-F",
+            "Rotom-Wash",
+            "Zapdos-Galar",
+            "Landorus",
+            "Chien-Pao"
+        ]
+    },
+    "30": {
+        "opponent_pick": [
+            "Landorus-Therian",
+            "Moltres-Galar",
+            "Sinistcha-Masterpiece",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Ninetales-Alola",
+            "Moltres-Galar"
+        ],
+        "my_party": [
+            "Cinderace",
+            "Corviknight",
+            "Toxtricity-Low-Key",
+            "Grimmsnarl",
+            "Frosmoth",
+            "Quaquaval"
+        ]
+    },
+    "31": {
+        "opponent_pick": [
+            "Toxtricity-Low-Key",
+            "Grimmsnarl",
+            "Cinderace",
+            "Frosmoth"
+        ],
+        "opponent_start_pick": [
+            "Grimmsnarl",
+            "Toxtricity-Low-Key"
+        ],
+        "my_party": [
+            "Moltres-Galar",
+            "Sinistcha-Masterpiece",
+            "Ninetales-Alola",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Heatran"
+        ]
+    },
+    "32": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Kommo-o",
+            "Rillaboom",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Flutter Mane",
+            "Rillaboom"
+        ],
+        "my_party": [
+            "Indeedee-F",
+            "Armarouge",
+            "Hatterene",
+            "Azumarill",
+            "Amoonguss",
+            "Clawitzer"
+        ]
+    },
+    "33": {
+        "opponent_pick": [
+            "Clawitzer",
+            "Armarouge",
+            "Azumarill",
+            "Indeedee-F"
+        ],
+        "opponent_start_pick": [
+            "Indeedee-F",
+            "Armarouge"
+        ],
+        "my_party": [
+            "Kommo-o",
+            "Tyranitar",
+            "Rillaboom",
+            "Flutter Mane",
+            "Arcanine-Hisui",
+            "Iron Bundle"
+        ]
+    },
+    "34": {
+        "opponent_pick": [
+            "Sinistcha",
+            "Ursaluna",
+            "Cresselia",
+            "Heatran"
+        ],
+        "opponent_start_pick": [
+            "Cresselia",
+            "Heatran"
+        ],
+        "my_party": [
+            "Grimmsnarl",
+            "Cresselia",
+            "Torkoal",
+            "Annihilape",
+            "Ogerpon-Hearthflame",
+            "Ursaluna-Bloodmoon"
+        ]
+    },
+    "35": {
+        "opponent_pick": [
+            "Annihilape",
+            "Grimmsnarl",
+            "Ursaluna-Bloodmoon",
+            "Ogerpon-Hearthflame"
+        ],
+        "opponent_start_pick": [
+            "Grimmsnarl",
+            "Annihilape"
+        ],
+        "my_party": [
+            "Cresselia",
+            "Flutter Mane",
+            "Iron Hands",
+            "Ursaluna",
+            "Sinistcha",
+            "Heatran"
+        ]
+    },
+    "36": {
+        "opponent_pick": [
+            "Vaporeon",
+            "Clefable",
+            "Kingambit"
+        ],
+        "opponent_start_pick": [
+            "Clefable",
+            "Kingambit"
+        ],
+        "my_party": [
+            "Gastrodon",
+            "Arcanine",
+            "Ursaluna",
+            "Corviknight",
+            "Cresselia",
+            "Ogerpon-Hearthflame"
+        ]
+    },
+    "37": {
+        "opponent_pick": [
+            "Corviknight",
+            "Arcanine",
+            "Ogerpon-Hearthflame"
+        ],
+        "opponent_start_pick": [
+            "Arcanine",
+            "Ogerpon-Hearthflame"
+        ],
+        "my_party": [
+            "Kingambit",
+            "Rillaboom",
+            "Arcanine-Hisui",
+            "Ting-Lu",
+            "Clefable",
+            "Vaporeon"
+        ]
+    },
+    "38": {
+        "opponent_pick": [
+            "Tornadus",
+            "Flutter Mane",
+            "Landorus-Therian",
+            "Iron Hands"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Flutter Mane"
+        ],
+        "my_party": [
+            "Tatsugiri",
+            "Dondozo",
+            "Sinistcha",
+            "Clefairy",
+            "Tornadus",
+            "Kommo-o"
+        ]
+    },
+    "39": {
+        "opponent_pick": [
+            "Tornadus",
+            "Tatsugiri",
+            "Clefairy",
+            "Dondozo"
+        ],
+        "opponent_start_pick": [
+            "Clefairy",
+            "Tornadus"
+        ],
+        "my_party": [
+            "Baxcalibur",
+            "Tornadus",
+            "Landorus-Therian",
+            "Flutter Mane",
+            "Iron Hands",
+            "Kingambit"
+        ]
+    },
+    "40": {
+        "opponent_pick": [
+            "Annihilape",
+            "Tornadus",
+            "Maushold-Four",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Ninetales-Alola"
+        ],
+        "my_party": [
+            "Noivern",
+            "Rotom-Heat",
+            "Thundurus-Therian",
+            "Bellibolt",
+            "Pikachu",
+            "Mamoswine"
+        ]
+    },
+    "41": {
+        "opponent_pick": [
+            "Thundurus-Therian",
+            "Noivern",
+            "Rotom-Heat",
+            "Mamoswine"
+        ],
+        "opponent_start_pick": [
+            "Noivern",
+            "Rotom-Heat"
+        ],
+        "my_party": [
+            "Chien-Pao",
+            "Ninetales-Alola",
+            "Dragonite",
+            "Annihilape",
+            "Tornadus",
+            "Maushold-Four"
+        ]
+    },
+    "42": {
+        "opponent_pick": [
+            "Ursaluna",
+            "Cresselia",
+            "Iron Bundle"
+        ],
+        "opponent_start_pick": [
+            "Cresselia",
+            "Ursaluna"
+        ],
+        "my_party": [
+            "Ogerpon-Wellspring",
+            "Tauros-Paldea-Blaze",
+            "Flutter Mane",
+            "Farigiraf",
+            "Goodra-Hisui",
+            "Tornadus-Therian"
+        ]
+    },
+    "43": {
+        "opponent_pick": [
+            "Tornadus-Therian",
+            "Farigiraf",
+            "Flutter Mane",
+            "Tauros-Paldea-Blaze"
+        ],
+        "opponent_start_pick": [
+            "Tauros-Paldea-Blaze",
+            "Tornadus-Therian"
+        ],
+        "my_party": [
+            "Amoonguss",
+            "Ursaluna",
+            "Iron Bundle",
+            "Regidrago",
+            "Cresselia",
+            "Iron Hands"
+        ]
+    },
+    "44": {
+        "opponent_pick": [
+            "Flamigo",
+            "Tatsugiri-Droopy",
+            "Garganacl",
+            "Dondozo"
+        ],
+        "opponent_start_pick": [
+            "Tatsugiri-Droopy",
+            "Garganacl"
+        ],
+        "my_party": [
+            "Kingambit",
+            "Rillaboom",
+            "Arcanine-Hisui",
+            "Ting-Lu",
+            "Clefable",
+            "Vaporeon"
+        ]
+    },
+    "45": {
+        "opponent_pick": [
+            "Clefable",
+            "Vaporeon",
+            "Kingambit",
+            "Rillaboom"
+        ],
+        "opponent_start_pick": [
+            "Kingambit",
+            "Clefable"
+        ],
+        "my_party": [
+            "Tatsugiri-Droopy",
+            "Garganacl",
+            "Flamigo",
+            "Dondozo",
+            "Urshifu-*",
+            "Chi-Yu"
+        ]
+    },
+    "46": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Dragapult",
+            "Chien-Pao",
+            "Dondozo"
+        ],
+        "opponent_start_pick": [
+            "Dondozo",
+            "Chien-Pao"
+        ],
+        "my_party": [
+            "Kingambit",
+            "Rillaboom",
+            "Arcanine-Hisui",
+            "Ting-Lu",
+            "Clefable",
+            "Vaporeon"
+        ]
+    },
+    "47": {
+        "opponent_pick": [
+            "Rillaboom",
+            "Clefable",
+            "Kingambit",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Clefable",
+            "Kingambit"
+        ],
+        "my_party": [
+            "Dragapult",
+            "Chien-Pao",
+            "Iron Hands",
+            "Dondozo",
+            "Ting-Lu",
+            "Flutter Mane"
+        ]
+    },
+    "48": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Ogerpon-Wellspring",
+            "Landorus-Therian",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Ninetales-Alola",
+            "Flutter Mane"
+        ],
+        "my_party": [
+            "Dondozo",
+            "Flamigo",
+            "Tatsugiri",
+            "Gothitelle",
+            "Ting-Lu",
+            "Scream Tail"
+        ]
+    },
+    "49": {
+        "opponent_pick": [
+            "Ting-Lu",
+            "Tatsugiri",
+            "Scream Tail",
+            "Dondozo"
+        ],
+        "opponent_start_pick": [
+            "Scream Tail",
+            "Tatsugiri"
+        ],
+        "my_party": [
+            "Gardevoir",
+            "Iron Hands",
+            "Ninetales-Alola",
+            "Landorus-Therian",
+            "Ogerpon-Wellspring",
+            "Flutter Mane"
+        ]
+    },
+    "50": {
+        "opponent_pick": [
+            "Chien-Pao",
+            "Landorus-Therian",
+            "Heatran",
+            "Iron Hands"
+        ],
+        "opponent_start_pick": [
+            "Iron Hands",
+            "Chien-Pao"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Urshifu-*",
+            "Ogerpon-Hearthflame",
+            "Rillaboom",
+            "Gholdengo",
+            "Regidrago"
+        ]
+    },
+    "51": {
+        "opponent_pick": [
+            "Gholdengo",
+            "Tornadus",
+            "Regidrago",
+            "Urshifu-Rapid-Strike"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Urshifu-Rapid-Strike"
+        ],
+        "my_party": [
+            "Amoonguss",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Flutter Mane",
+            "Heatran",
+            "Chien-Pao"
+        ]
+    },
+    "52": {
+        "opponent_pick": [
+            "Dragapult",
+            "Heatran",
+            "Urshifu-Rapid-Strike",
+            "Chien-Pao"
+        ],
+        "opponent_start_pick": [
+            "Heatran",
+            "Dragapult"
+        ],
+        "my_party": [
+            "Iron Bundle",
+            "Ninetales-Alola",
+            "Annihilape",
+            "Tropius",
+            "Heatran",
+            "Dedenne"
+        ]
+    },
+    "53": {
+        "opponent_pick": [
+            "Annihilape",
+            "Iron Bundle",
+            "Dedenne",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Ninetales-Alola",
+            "Dedenne"
+        ],
+        "my_party": [
+            "Chien-Pao",
+            "Dragapult",
+            "Heatran",
+            "Farigiraf",
+            "Rillaboom",
+            "Urshifu-*"
+        ]
+    },
+    "54": {
+        "opponent_pick": [
+            "Rillaboom",
+            "Klefki",
+            "Thundurus",
+            "Gastrodon-East"
+        ],
+        "opponent_start_pick": [
+            "Klefki",
+            "Gastrodon-East"
+        ],
+        "my_party": [
+            "Zapdos-Galar",
+            "Chien-Pao",
+            "Dragonite",
+            "Heatran",
+            "Iron Hands",
+            "Farigiraf"
+        ]
+    },
+    "55": {
+        "opponent_pick": [
+            "Zapdos-Galar",
+            "Farigiraf",
+            "Dragonite",
+            "Chien-Pao"
+        ],
+        "opponent_start_pick": [
+            "Chien-Pao",
+            "Dragonite"
+        ],
+        "my_party": [
+            "Urshifu-*",
+            "Rillaboom",
+            "Landorus-Therian",
+            "Gastrodon-East",
+            "Thundurus",
+            "Klefki"
+        ]
+    },
+    "56": {
+        "opponent_pick": [
+            "Azumarill",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Landorus"
+        ],
+        "my_party": [
+            "Weezing",
+            "Ogerpon-Wellspring",
+            "Landorus-Therian",
+            "Roaring Moon",
+            "Slaking",
+            "Sinistcha"
+        ]
+    },
+    "57": {
+        "opponent_pick": [
+            "Landorus-Therian",
+            "Weezing",
+            "Ogerpon-Wellspring",
+            "Slaking"
+        ],
+        "opponent_start_pick": [
+            "Weezing",
+            "Slaking"
+        ],
+        "my_party": [
+            "Azumarill",
+            "Decidueye-Hisui",
+            "Chi-Yu",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ]
+    },
+    "58": {
+        "opponent_pick": [
+            "Decidueye-Hisui",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Decidueye-Hisui"
+        ],
+        "my_party": [
+            "Basculegion",
+            "Politoed",
+            "Rillaboom",
+            "Flutter Mane",
+            "Kingambit",
+            "Regieleki"
+        ]
+    },
+    "59": {
+        "opponent_pick": [
+            "Regieleki",
+            "Politoed",
+            "Rillaboom"
+        ],
+        "opponent_start_pick": [
+            "Politoed",
+            "Regieleki"
+        ],
+        "my_party": [
+            "Azumarill",
+            "Decidueye-Hisui",
+            "Chi-Yu",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ]
+    },
+    "60": {
+        "opponent_pick": [
+            "Decidueye-Hisui",
+            "Landorus",
+            "Sableye",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Landorus"
+        ],
+        "my_party": [
+            "Basculegion",
+            "Politoed",
+            "Rillaboom",
+            "Flutter Mane",
+            "Kingambit",
+            "Regieleki"
+        ]
+    },
+    "61": {
+        "opponent_pick": [
+            "Regieleki",
+            "Politoed",
+            "Flutter Mane",
+            "Basculegion"
+        ],
+        "opponent_start_pick": [
+            "Flutter Mane",
+            "Basculegion"
+        ],
+        "my_party": [
+            "Azumarill",
+            "Decidueye-Hisui",
+            "Chi-Yu",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ]
+    },
+    "62": {
+        "opponent_pick": [
+            "Samurott-Hisui",
+            "Decidueye-Hisui",
+            "Ursaluna-Bloodmoon",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Arcanine-Hisui",
+            "Decidueye-Hisui"
+        ],
+        "my_party": [
+            "Spectrier",
+            "Kingambit",
+            "Tornadus",
+            "Urshifu-*",
+            "Iron Hands",
+            "Flutter Mane"
+        ]
+    },
+    "63": {
+        "opponent_pick": [
+            "Spectrier",
+            "Tornadus",
+            "Urshifu-Rapid-Strike",
+            "Iron Hands"
+        ],
+        "opponent_start_pick": [
+            "Spectrier",
+            "Tornadus"
+        ],
+        "my_party": [
+            "Decidueye-Hisui",
+            "Samurott-Hisui",
+            "Arcanine-Hisui",
+            "Braviary-Hisui",
+            "Zoroark-Hisui",
+            "Ursaluna-Bloodmoon"
+        ]
+    },
+    "64": {
+        "opponent_pick": [
+            "Raichu",
+            "Kilowattrel",
+            "Pawmot",
+            "Jolteon"
+        ],
+        "opponent_start_pick": [
+            "Raichu",
+            "Pawmot"
+        ],
+        "my_party": [
+            "Spectrier",
+            "Kingambit",
+            "Tornadus",
+            "Urshifu-*",
+            "Iron Hands",
+            "Flutter Mane"
+        ]
+    },
+    "65": {
+        "opponent_pick": [
+            "Spectrier",
+            "Tornadus",
+            "Flutter Mane",
+            "Iron Hands"
+        ],
+        "opponent_start_pick": [
+            "Spectrier",
+            "Tornadus"
+        ],
+        "my_party": [
+            "Jolteon",
+            "Raichu",
+            "Pawmot",
+            "Kilowattrel"
+        ]
+    },
+    "66": {
+        "opponent_pick": [
+            "Gholdengo",
+            "Flutter Mane",
+            "Dragonite"
+        ],
+        "opponent_start_pick": [
+            "Flutter Mane",
+            "Gholdengo"
+        ],
+        "my_party": [
+            "Dragonite",
+            "Garchomp",
+            "Flutter Mane",
+            "Sinistcha",
+            "Iron Bundle",
+            "Arcanine-Hisui"
+        ]
+    },
+    "67": {
+        "opponent_pick": [
+            "Arcanine-Hisui",
+            "Dragonite",
+            "Garchomp",
+            "Iron Bundle"
+        ],
+        "opponent_start_pick": [
+            "Dragonite",
+            "Garchomp"
+        ],
+        "my_party": [
+            "Kilowattrel",
+            "Flutter Mane",
+            "Gholdengo",
+            "Dragonite",
+            "Indeedee-F",
+            "Landorus-Therian"
+        ]
+    },
+    "68": {
+        "opponent_pick": [
+            "Gholdengo",
+            "Tornadus",
+            "Ogerpon-Wellspring",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Arcanine-Hisui",
+            "Ogerpon-Wellspring"
+        ],
+        "my_party": [
+            "Ting-Lu",
+            "Okidogi",
+            "Roaring Moon",
+            "Heatran",
+            "Ogerpon-Wellspring",
+            "Thundurus"
+        ]
+    },
+    "69": {
+        "opponent_pick": [
+            "Okidogi",
+            "Heatran",
+            "Roaring Moon",
+            "Thundurus"
+        ],
+        "opponent_start_pick": [
+            "Roaring Moon",
+            "Okidogi"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Urshifu-*",
+            "Rillaboom",
+            "Gholdengo",
+            "Ogerpon-Wellspring",
+            "Tornadus"
+        ]
+    },
+    "70": {
+        "opponent_pick": [
+            "Farigiraf",
+            "Kingambit",
+            "Avalugg-Hisui",
+            "Tyranitar"
+        ],
+        "opponent_start_pick": [
+            "Kingambit",
+            "Farigiraf"
+        ],
+        "my_party": [
+            "Espathra",
+            "Gastrodon-East",
+            "Tornadus",
+            "Ogerpon",
+            "Glimmora",
+            "Arcanine-Hisui"
+        ]
+    },
+    "71": {
+        "opponent_pick": [
+            "Tornadus",
+            "Arcanine-Hisui",
+            "Ogerpon",
+            "Gastrodon-East"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Gastrodon-East"
+        ],
+        "my_party": [
+            "Tyranitar",
+            "Avalugg-Hisui",
+            "Kingambit",
+            "Gastrodon",
+            "Krookodile",
+            "Farigiraf"
+        ]
+    },
+    "72": {
+        "opponent_pick": [
+            "Azumarill",
+            "Landorus",
+            "Sableye",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Azumarill"
+        ],
+        "my_party": [
+            "Scovillain",
+            "Dragapult",
+            "Cinderace",
+            "Slither Wing",
+            "Typhlosion-Hisui",
+            "Iron Moth"
+        ]
+    },
+    "73": {
+        "opponent_pick": [
+            "Dragapult",
+            "Slither Wing"
+        ],
+        "opponent_start_pick": [
+            "Dragapult",
+            "Slither Wing"
+        ],
+        "my_party": [
+            "Azumarill",
+            "Decidueye-Hisui",
+            "Chi-Yu",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ]
+    },
+    "74": {
+        "opponent_pick": [
+            "Annihilape",
+            "Tornadus",
+            "Ogerpon-Wellspring",
+            "Scream Tail"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Annihilape"
+        ],
+        "my_party": [
+            "Dondozo",
+            "Glimmora",
+            "Tatsugiri",
+            "Chi-Yu",
+            "Flutter Mane",
+            "Rillaboom"
+        ]
+    },
+    "75": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Rillaboom",
+            "Tatsugiri",
+            "Dondozo"
+        ],
+        "opponent_start_pick": [
+            "Flutter Mane",
+            "Rillaboom"
+        ],
+        "my_party": [
+            "Annihilape",
+            "Ogerpon-Wellspring",
+            "Tornadus",
+            "Landorus-Therian",
+            "Scream Tail",
+            "Heatran"
+        ]
+    },
+    "76": {
+        "opponent_pick": [
+            "Glimmora",
+            "Hydreigon",
+            "Iron Hands",
+            "Espathra"
+        ],
+        "opponent_start_pick": [
+            "Glimmora",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Dondozo",
+            "Tatsugiri",
+            "Pachirisu",
+            "Roaring Moon",
+            "Infernape",
+            "Tsareena"
+        ]
+    },
+    "77": {
+        "opponent_pick": [
+            "Tatsugiri",
+            "Dondozo",
+            "Roaring Moon",
+            "Infernape"
+        ],
+        "opponent_start_pick": [
+            "Infernape",
+            "Roaring Moon"
+        ],
+        "my_party": [
+            "Iron Hands",
+            "Hydreigon",
+            "Espathra",
+            "Zoroark-Hisui",
+            "Glimmora",
+            "Gliscor"
+        ]
+    },
+    "78": {
+        "opponent_pick": [
+            "Rillaboom",
+            "Iron Hands",
+            "Roaring Moon",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Roaring Moon",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Flutter Mane",
+            "Urshifu-*",
+            "Landorus-Therian",
+            "Regieleki",
+            "Ogerpon-Hearthflame"
+        ]
+    },
+    "79": {
+        "opponent_pick": [
+            "Regieleki",
+            "Flutter Mane",
+            "Landorus-Therian",
+            "Ogerpon-Hearthflame"
+        ],
+        "opponent_start_pick": [
+            "Regieleki",
+            "Landorus-Therian"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Iron Hands",
+            "Landorus",
+            "Rillaboom",
+            "Roaring Moon",
+            "Urshifu-*"
+        ]
+    },
+    "80": {
+        "opponent_pick": [
+            "Landorus",
+            "Rillaboom",
+            "Iron Hands",
+            "Roaring Moon"
+        ],
+        "opponent_start_pick": [
+            "Roaring Moon",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Weezing",
+            "Regieleki",
+            "Ogerpon-Hearthflame",
+            "Rillaboom",
+            "Flutter Mane",
+            "Urshifu-*"
+        ]
+    },
+    "81": {
+        "opponent_pick": [
+            "Regieleki",
+            "Rillaboom",
+            "Urshifu-Rapid-Strike",
+            "Ogerpon-Hearthflame"
+        ],
+        "opponent_start_pick": [
+            "Rillaboom",
+            "Urshifu-Rapid-Strike"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Iron Hands",
+            "Landorus",
+            "Rillaboom",
+            "Roaring Moon",
+            "Urshifu-*"
+        ]
+    },
+    "82": {
+        "opponent_pick": [
+            "Landorus",
+            "Rillaboom",
+            "Roaring Moon",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Roaring Moon",
+            "Rillaboom"
+        ],
+        "my_party": [
+            "Weezing",
+            "Regieleki",
+            "Ogerpon-Hearthflame",
+            "Rillaboom",
+            "Flutter Mane",
+            "Urshifu-*"
+        ]
+    },
+    "83": {
+        "opponent_pick": [
+            "Regieleki",
+            "Rillaboom",
+            "Urshifu-Rapid-Strike",
+            "Ogerpon-Hearthflame"
+        ],
+        "opponent_start_pick": [
+            "Rillaboom",
+            "Urshifu-Rapid-Strike"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Iron Hands",
+            "Landorus",
+            "Rillaboom",
+            "Roaring Moon",
+            "Urshifu-*"
+        ]
+    },
+    "84": {
+        "opponent_pick": [
+            "Roaring Moon",
+            "Rillaboom",
+            "Urshifu-Rapid-Strike",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Rillaboom",
+            "Urshifu-Rapid-Strike"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Flutter Mane",
+            "Urshifu-*",
+            "Landorus-Therian",
+            "Regieleki",
+            "Ogerpon-Hearthflame"
+        ]
+    },
+    "85": {
+        "opponent_pick": [
+            "Regieleki",
+            "Tornadus",
+            "Landorus-Therian",
+            "Flutter Mane"
+        ],
+        "opponent_start_pick": [
+            "Regieleki",
+            "Tornadus"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Iron Hands",
+            "Landorus",
+            "Rillaboom",
+            "Roaring Moon",
+            "Urshifu-*"
+        ]
+    },
+    "86": {
+        "opponent_pick": [
+            "Landorus",
+            "Rillaboom",
+            "Iron Hands",
+            "Roaring Moon"
+        ],
+        "opponent_start_pick": [
+            "Roaring Moon",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Weezing",
+            "Regieleki",
+            "Ogerpon-Hearthflame",
+            "Rillaboom",
+            "Flutter Mane",
+            "Urshifu-*"
+        ]
+    },
+    "87": {
+        "opponent_pick": [
+            "Regieleki",
+            "Flutter Mane",
+            "Weezing",
+            "Rillaboom"
+        ],
+        "opponent_start_pick": [
+            "Regieleki",
+            "Rillaboom"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Iron Hands",
+            "Landorus",
+            "Rillaboom",
+            "Roaring Moon",
+            "Urshifu-*"
+        ]
+    },
+    "88": {
+        "opponent_pick": [
+            "Roaring Moon",
+            "Rillaboom",
+            "Urshifu-Rapid-Strike",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Rillaboom",
+            "Urshifu-Rapid-Strike"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Flutter Mane",
+            "Urshifu-*",
+            "Landorus-Therian",
+            "Regieleki",
+            "Ogerpon-Hearthflame"
+        ]
+    },
+    "89": {
+        "opponent_pick": [
+            "Tornadus",
+            "Landorus-Therian",
+            "Urshifu-Rapid-Strike",
+            "Ogerpon-Hearthflame"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Landorus-Therian"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Iron Hands",
+            "Landorus",
+            "Rillaboom",
+            "Roaring Moon",
+            "Urshifu-*"
+        ]
+    },
+    "90": {
+        "opponent_pick": [
+            "Tornadus-Therian",
+            "Flutter Mane",
+            "Goodra-Hisui",
+            "Tauros-Paldea-Blaze"
+        ],
+        "opponent_start_pick": [
+            "Tauros-Paldea-Blaze",
+            "Goodra-Hisui"
+        ],
+        "my_party": [
+            "Amoonguss",
+            "Ursaluna",
+            "Iron Bundle",
+            "Regidrago",
+            "Cresselia",
+            "Iron Hands"
+        ]
+    },
+    "91": {
+        "opponent_pick": [
+            "Ursaluna",
+            "Cresselia",
+            "Amoonguss"
+        ],
+        "opponent_start_pick": [
+            "Amoonguss",
+            "Ursaluna"
+        ],
+        "my_party": [
+            "Ogerpon-Wellspring",
+            "Tauros-Paldea-Blaze",
+            "Flutter Mane",
+            "Farigiraf",
+            "Goodra-Hisui",
+            "Tornadus-Therian"
+        ]
+    },
+    "92": {
+        "opponent_pick": [
+            "Goodra-Hisui",
+            "Tauros-Paldea-Blaze"
+        ],
+        "opponent_start_pick": [
+            "Tauros-Paldea-Blaze",
+            "Goodra-Hisui"
+        ],
+        "my_party": [
+            "Amoonguss",
+            "Ursaluna",
+            "Iron Bundle",
+            "Regidrago",
+            "Cresselia",
+            "Iron Hands"
+        ]
+    },
+    "93": {
+        "opponent_pick": [
+            "Ursaluna",
+            "Cresselia",
+            "Iron Hands",
+            "Amoonguss"
+        ],
+        "opponent_start_pick": [
+            "Amoonguss",
+            "Cresselia"
+        ],
+        "my_party": [
+            "Ogerpon-Wellspring",
+            "Tauros-Paldea-Blaze",
+            "Flutter Mane",
+            "Farigiraf",
+            "Goodra-Hisui",
+            "Tornadus-Therian"
+        ]
+    },
+    "94": {
+        "opponent_pick": [
+            "Gholdengo",
+            "Tornadus",
+            "Iron Hands",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Gholdengo"
+        ],
+        "my_party": [
+            "Ninetales-Alola",
+            "Iron Bundle",
+            "Rillaboom",
+            "Urshifu-*",
+            "Farigiraf",
+            "Chi-Yu"
+        ]
+    },
+    "95": {
+        "opponent_pick": [
+            "Iron Bundle",
+            "Chi-Yu",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Ninetales-Alola",
+            "Iron Bundle"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Arcanine-Hisui",
+            "Iron Hands",
+            "Gholdengo",
+            "Urshifu-*",
+            "Ogerpon-Wellspring"
+        ]
+    },
+    "96": {
+        "opponent_pick": [
+            "Sylveon",
+            "Landorus-Therian",
+            "Heatran",
+            "Iron Bundle"
+        ],
+        "opponent_start_pick": [
+            "Iron Bundle",
+            "Landorus-Therian"
+        ],
+        "my_party": [
+            "Gastrodon-East",
+            "Heatran",
+            "Iron Hands",
+            "Grimmsnarl",
+            "Roaring Moon",
+            "Ogerpon"
+        ]
+    },
+    "97": {
+        "opponent_pick": [
+            "Grimmsnarl",
+            "Heatran",
+            "Roaring Moon",
+            "Gastrodon-East"
+        ],
+        "opponent_start_pick": [
+            "Gastrodon-East",
+            "Grimmsnarl"
+        ],
+        "my_party": [
+            "Moltres-Galar",
+            "Sylveon",
+            "Amoonguss",
+            "Heatran",
+            "Iron Bundle",
+            "Landorus-Therian"
+        ]
+    },
+    "98": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Rillaboom",
+            "Tatsugiri",
+            "Dondozo"
+        ],
+        "opponent_start_pick": [
+            "Flutter Mane",
+            "Rillaboom"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Landorus",
+            "Iron Bundle",
+            "Gholdengo",
+            "Brambleghast",
+            "Urshifu-*"
+        ]
+    },
+    "99": {
+        "opponent_pick": [
+            "Tornadus",
+            "Landorus",
+            "Iron Bundle",
+            "Brambleghast"
+        ],
+        "opponent_start_pick": [
+            "Iron Bundle",
+            "Landorus"
+        ],
+        "my_party": [
+            "Dondozo",
+            "Glimmora",
+            "Tatsugiri",
+            "Chi-Yu",
+            "Flutter Mane",
+            "Rillaboom"
+        ]
+    },
+    "100": {
+        "opponent_pick": [
+            "Chien-Pao",
+            "Trevenant",
+            "Ursaluna-Bloodmoon",
+            "Iron Hands"
+        ],
+        "opponent_start_pick": [
+            "Iron Hands",
+            "Chien-Pao"
+        ],
+        "my_party": [
+            "Heatran",
+            "Landorus-Therian",
+            "Rillaboom",
+            "Tornadus",
+            "Ogerpon-Wellspring",
+            "Farigiraf"
+        ]
+    },
+    "101": {
+        "opponent_pick": [
+            "Tornadus",
+            "Landorus-Therian",
+            "Heatran",
+            "Rillaboom"
+        ],
+        "opponent_start_pick": [
+            "Landorus-Therian",
+            "Heatran"
+        ],
+        "my_party": [
+            "Iron Hands",
+            "Kingambit",
+            "Flutter Mane",
+            "Chien-Pao",
+            "Trevenant",
+            "Ursaluna-Bloodmoon"
+        ]
+    },
+    "102": {
+        "opponent_pick": [
+            "Iron Hands",
+            "Landorus",
+            "Sableye",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Landorus"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Landorus",
+            "Urshifu-*",
+            "Rillaboom",
+            "Arcanine-Hisui",
+            "Gholdengo"
+        ]
+    },
+    "103": {
+        "opponent_pick": [
+            "Tornadus",
+            "Landorus",
+            "Rillaboom",
+            "Urshifu-Rapid-Strike"
+        ],
+        "opponent_start_pick": [
+            "Rillaboom",
+            "Urshifu-Rapid-Strike"
+        ],
+        "my_party": [
+            "Slaking",
+            "Sableye",
+            "Amoonguss",
+            "Iron Hands",
+            "Landorus",
+            "Chi-Yu"
+        ]
+    },
+    "104": {
+        "opponent_pick": [
+            "Iron Hands",
+            "Landorus",
+            "Sableye",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Chi-Yu"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Landorus",
+            "Urshifu-*",
+            "Rillaboom",
+            "Arcanine-Hisui",
+            "Gholdengo"
+        ]
+    },
+    "105": {
+        "opponent_pick": [
+            "Tornadus",
+            "Landorus",
+            "Urshifu-Rapid-Strike",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Arcanine-Hisui"
+        ],
+        "my_party": [
+            "Slaking",
+            "Sableye",
+            "Amoonguss",
+            "Iron Hands",
+            "Landorus",
+            "Chi-Yu"
+        ]
+    },
+    "106": {
+        "opponent_pick": [
+            "Tatsugiri",
+            "Kingambit",
+            "Dragonite",
+            "Dondozo"
+        ],
+        "opponent_start_pick": [
+            "Kingambit",
+            "Dragonite"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Articuno-Galar",
+            "Gholdengo",
+            "Iron Hands",
+            "Roaring Moon",
+            "Urshifu-*"
+        ]
+    },
+    "107": {
+        "opponent_pick": [
+            "Articuno-Galar",
+            "Urshifu-Rapid-Strike",
+            "Iron Hands",
+            "Roaring Moon"
+        ],
+        "opponent_start_pick": [
+            "Roaring Moon",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Infernape",
+            "Dondozo",
+            "Tatsugiri",
+            "Dragonite",
+            "Chien-Pao",
+            "Kingambit"
+        ]
+    },
+    "108": {
+        "opponent_pick": [
+            "Dragonite",
+            "Thundurus-Therian",
+            "Klefki",
+            "Qwilfish-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Thundurus-Therian",
+            "Klefki"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Urshifu-*",
+            "Dondozo",
+            "Tatsugiri",
+            "Naclstack",
+            "Okidogi"
+        ]
+    },
+    "109": {
+        "opponent_pick": [
+            "Tornadus",
+            "Tatsugiri",
+            "Urshifu-Rapid-Strike",
+            "Dondozo"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Urshifu-Rapid-Strike"
+        ],
+        "my_party": [
+            "Thundurus-Therian",
+            "Qwilfish-Hisui",
+            "Klefki",
+            "Eelektross",
+            "Chien-Pao",
+            "Dragonite"
+        ]
+    },
+    "110": {
+        "opponent_pick": [
+            "Thundurus-Therian",
+            "Klefki",
+            "Eelektross",
+            "Qwilfish-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Eelektross",
+            "Klefki"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Urshifu-*",
+            "Dondozo",
+            "Tatsugiri",
+            "Naclstack",
+            "Okidogi"
+        ]
+    },
+    "111": {
+        "opponent_pick": [
+            "Tornadus",
+            "Urshifu-Rapid-Strike",
+            "Dondozo"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Urshifu-Rapid-Strike"
+        ],
+        "my_party": [
+            "Thundurus-Therian",
+            "Qwilfish-Hisui",
+            "Klefki",
+            "Eelektross",
+            "Chien-Pao",
+            "Dragonite"
+        ]
+    },
+    "112": {
+        "opponent_pick": [
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Landorus"
+        ],
+        "my_party": [
+            "Iron Hands",
+            "Annihilape",
+            "Kommo-o",
+            "Iron Valiant",
+            "Tauros-Paldea-Aqua",
+            "Gallade"
+        ]
+    },
+    "113": {
+        "opponent_pick": [
+            "Annihilape",
+            "Gallade",
+            "Kommo-o",
+            "Iron Valiant"
+        ],
+        "opponent_start_pick": [
+            "Kommo-o",
+            "Gallade"
+        ],
+        "my_party": [
+            "Azumarill",
+            "Decidueye-Hisui",
+            "Chi-Yu",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ]
+    },
+    "114": {
+        "opponent_pick": [
+            "Flamigo",
+            "Kommo-o",
+            "Blissey",
+            "Snorlax"
+        ],
+        "opponent_start_pick": [
+            "Snorlax",
+            "Blissey"
+        ],
+        "my_party": [
+            "Eelektross",
+            "Pelipper",
+            "Rillaboom",
+            "Gholdengo",
+            "Articuno-Galar",
+            "Urshifu-*"
+        ]
+    },
+    "115": {
+        "opponent_pick": [
+            "Pelipper",
+            "Rillaboom",
+            "Eelektross",
+            "Urshifu-Rapid-Strike"
+        ],
+        "opponent_start_pick": [
+            "Rillaboom",
+            "Pelipper"
+        ],
+        "my_party": [
+            "Snorlax",
+            "Slowking-Galar",
+            "Flamigo",
+            "Kommo-o",
+            "Iron Hands",
+            "Blissey"
+        ]
+    },
+    "116": {
+        "opponent_pick": [
+            "Farigiraf",
+            "Goodra-Hisui",
+            "Sinistcha",
+            "Ribombee"
+        ],
+        "opponent_start_pick": [
+            "Ribombee",
+            "Farigiraf"
+        ],
+        "my_party": [
+            "Eelektross",
+            "Pelipper",
+            "Rillaboom",
+            "Gholdengo",
+            "Articuno-Galar",
+            "Urshifu-*"
+        ]
+    },
+    "117": {
+        "opponent_pick": [
+            "Gholdengo",
+            "Pelipper",
+            "Articuno-Galar"
+        ],
+        "opponent_start_pick": [
+            "Articuno-Galar",
+            "Pelipper"
+        ],
+        "my_party": [
+            "Ribombee",
+            "Goodra-Hisui",
+            "Sinistcha",
+            "Farigiraf",
+            "Arcanine-Hisui",
+            "Iron Bundle"
+        ]
+    },
+    "118": {
+        "opponent_pick": [
+            "Rotom-Wash",
+            "Flutter Mane",
+            "Roaring Moon",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Roaring Moon",
+            "Rotom-Wash"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Amoonguss",
+            "Thundurus-Therian",
+            "Urshifu-*",
+            "Ogerpon-Wellspring",
+            "Landorus-Therian"
+        ]
+    },
+    "119": {
+        "opponent_pick": [
+            "Thundurus-Therian",
+            "Tornadus",
+            "Urshifu-Rapid-Strike",
+            "Ogerpon-Wellspring"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Urshifu-Rapid-Strike"
+        ],
+        "my_party": [
+            "Rotom-Wash",
+            "Arcanine-Hisui",
+            "Ninetales-Alola",
+            "Rillaboom",
+            "Flutter Mane",
+            "Roaring Moon"
+        ]
+    },
+    "120": {
+        "opponent_pick": [
+            "Tornadus",
+            "Iron Bundle",
+            "Chien-Pao",
+            "Dragonite"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Iron Bundle"
+        ],
+        "my_party": [
+            "Ninetales-Alola",
+            "Empoleon",
+            "Roaring Moon",
+            "Sinistcha",
+            "Urshifu-*",
+            "Arcanine-Hisui"
+        ]
+    },
+    "121": {
+        "opponent_pick": [
+            "Arcanine-Hisui",
+            "Urshifu",
+            "Empoleon",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Ninetales-Alola",
+            "Arcanine-Hisui"
+        ],
+        "my_party": [
+            "Chien-Pao",
+            "Ninetales-Alola",
+            "Dragonite",
+            "Iron Bundle",
+            "Tornadus",
+            "Sinistcha"
+        ]
+    },
+    "122": {
+        "opponent_pick": [
+            "Arcanine-Hisui",
+            "Mamoswine",
+            "Rillaboom",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Ninetales-Alola",
+            "Rillaboom"
+        ],
+        "my_party": [
+            "Chien-Pao",
+            "Ninetales-Alola",
+            "Dragonite",
+            "Annihilape",
+            "Tornadus",
+            "Maushold-Four"
+        ]
+    },
+    "123": {
+        "opponent_pick": [
+            "Annihilape",
+            "Tornadus",
+            "Maushold-Four",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Ninetales-Alola",
+            "Tornadus"
+        ],
+        "my_party": [
+            "Ninetales-Alola",
+            "Rillaboom",
+            "Cresselia",
+            "Arcanine-Hisui",
+            "Mamoswine",
+            "Dragonite"
+        ]
+    },
+    "124": {
+        "opponent_pick": [
+            "Ampharos",
+            "Chien-Pao",
+            "Palafin"
+        ],
+        "opponent_start_pick": [
+            "Palafin",
+            "Chien-Pao"
+        ],
+        "my_party": [
+            "Rillaboom",
+            "Armarouge",
+            "Altaria",
+            "Annihilape"
+        ]
+    },
+    "125": {
+        "opponent_pick": [
+            "Altaria",
+            "Rillaboom",
+            "Armarouge"
+        ],
+        "opponent_start_pick": [
+            "Rillaboom",
+            "Armarouge"
+        ],
+        "my_party": [
+            "Palafin",
+            "Chien-Pao",
+            "Ampharos",
+            "Ambipom"
+        ]
+    },
+    "126": {
+        "opponent_pick": [
+            "Sylveon",
+            "Urshifu-Rapid-Strike",
+            "Armarouge",
+            "Ogerpon-Hearthflame"
+        ],
+        "opponent_start_pick": [
+            "Armarouge",
+            "Sylveon"
+        ],
+        "my_party": [
+            "Regidrago",
+            "Indeedee-F",
+            "Armarouge",
+            "Ursaluna",
+            "Torkoal",
+            "Lilligant-Hisui"
+        ]
+    },
+    "127": {
+        "opponent_pick": [
+            "Lilligant-Hisui",
+            "Regidrago",
+            "Indeedee-F",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Indeedee-F",
+            "Lilligant-Hisui"
+        ],
+        "my_party": [
+            "Ogerpon-Hearthflame",
+            "Urshifu-*",
+            "Sylveon",
+            "Oranguru",
+            "Armarouge",
+            "Indeedee-F"
+        ]
+    },
+    "128": {
+        "opponent_pick": [
+            "Grimmsnarl",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Palafin"
+        ],
+        "opponent_start_pick": [
+            "Grimmsnarl",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Articuno-Galar",
+            "Gholdengo",
+            "Iron Hands",
+            "Roaring Moon",
+            "Urshifu-*"
+        ]
+    },
+    "129": {
+        "opponent_pick": [
+            "Articuno-Galar",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Articuno-Galar",
+            "Arcanine-Hisui"
+        ],
+        "my_party": [
+            "Grimmsnarl",
+            "Palafin",
+            "Clefairy",
+            "Iron Hands",
+            "Flutter Mane",
+            "Landorus-Therian"
+        ]
+    },
+    "130": {
+        "opponent_pick": [
+            "Farigiraf",
+            "Ogerpon-Wellspring",
+            "Iron Hands",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Farigiraf",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Salamence",
+            "Kingambit",
+            "Politoed",
+            "Basculegion",
+            "Rillaboom",
+            "Flutter Mane"
+        ]
+    },
+    "131": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Kingambit",
+            "Salamence"
+        ],
+        "opponent_start_pick": [
+            "Flutter Mane",
+            "Kingambit"
+        ],
+        "my_party": [
+            "Torkoal",
+            "Slowpoke",
+            "Flutter Mane",
+            "Farigiraf",
+            "Iron Hands",
+            "Ogerpon-Wellspring"
+        ]
+    },
+    "132": {
+        "opponent_pick": [
+            "Frosmoth",
+            "Grimmsnarl",
+            "Cinderace",
+            "Corviknight"
+        ],
+        "opponent_start_pick": [
+            "Grimmsnarl",
+            "Frosmoth"
+        ],
+        "my_party": [
+            "Armarouge",
+            "Indeedee-F",
+            "Rotom-Wash",
+            "Zapdos-Galar",
+            "Landorus",
+            "Chien-Pao"
+        ]
+    },
+    "133": {
+        "opponent_pick": [
+            "Zapdos-Galar",
+            "Landorus",
+            "Indeedee-F",
+            "Armarouge"
+        ],
+        "opponent_start_pick": [
+            "Armarouge",
+            "Landorus"
+        ],
+        "my_party": [
+            "Cinderace",
+            "Corviknight",
+            "Toxtricity-Low-Key",
+            "Grimmsnarl",
+            "Frosmoth",
+            "Quaquaval"
+        ]
+    },
+    "134": {
+        "opponent_pick": [
+            "Weezing",
+            "Ogerpon-Wellspring",
+            "Roaring Moon"
+        ],
+        "opponent_start_pick": [
+            "Weezing",
+            "Ogerpon-Wellspring"
+        ],
+        "my_party": [
+            "Chi-Yu",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece",
+            "Urshifu-*",
+            "Ursaluna-Bloodmoon"
+        ]
+    },
+    "135": {
+        "opponent_pick": [
+            "Landorus",
+            "Ursaluna-Bloodmoon",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ],
+        "opponent_start_pick": [
+            "Sableye",
+            "Landorus"
+        ],
+        "my_party": [
+            "Weezing",
+            "Flutter Mane",
+            "Ogerpon-Wellspring",
+            "Landorus-Therian",
+            "Roaring Moon",
+            "Iron Hands"
+        ]
+    },
+    "136": {
+        "opponent_pick": [
+            "Illumise",
+            "Farigiraf",
+            "Glastrier",
+            "Palafin"
+        ],
+        "opponent_start_pick": [
+            "Palafin",
+            "Illumise"
+        ],
+        "my_party": [
+            "Azumarill",
+            "Decidueye-Hisui",
+            "Chi-Yu",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ]
+    },
+    "137": {
+        "opponent_pick": [
+            "Landorus",
+            "Sinistcha-Masterpiece",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Chi-Yu",
+            "Landorus"
+        ],
+        "my_party": [
+            "Mudsdale",
+            "Glastrier",
+            "Farigiraf",
+            "Palafin",
+            "Lurantis",
+            "Illumise"
+        ]
+    },
+    "138": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Landorus-Therian",
+            "Heatran",
+            "Iron Hands"
+        ],
+        "opponent_start_pick": [
+            "Landorus-Therian",
+            "Flutter Mane"
+        ],
+        "my_party": [
+            "Azumarill",
+            "Decidueye-Hisui",
+            "Chi-Yu",
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece"
+        ]
+    },
+    "139": {
+        "opponent_pick": [
+            "Landorus",
+            "Sableye",
+            "Sinistcha-Masterpiece",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Landorus",
+            "Sableye"
+        ],
+        "my_party": [
+            "Flutter Mane",
+            "Landorus-Therian",
+            "Heatran",
+            "Iron Hands",
+            "Ogerpon-Wellspring",
+            "Amoonguss"
+        ]
+    },
+    "140": {
+        "opponent_pick": [
+            "Pincurchin",
+            "Urshifu-Rapid-Strike",
+            "Iron Hands",
+            "Sneasler"
+        ],
+        "opponent_start_pick": [
+            "Urshifu-Rapid-Strike",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Chandelure",
+            "Grimmsnarl",
+            "Ogerpon-Cornerstone",
+            "Iron Hands",
+            "Gholdengo",
+            "Iron Bundle"
+        ]
+    },
+    "141": {
+        "opponent_pick": [
+            "Gholdengo",
+            "Ogerpon-Cornerstone",
+            "Iron Bundle",
+            "Iron Hands"
+        ],
+        "opponent_start_pick": [
+            "Ogerpon-Cornerstone",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Iron Hands",
+            "Iron Bundle",
+            "Urshifu-*",
+            "Sneasler",
+            "Ninetales-Alola",
+            "Pincurchin"
+        ]
+    },
+    "142": {
+        "opponent_pick": [
+            "Tornadus",
+            "Rillaboom",
+            "Chi-Yu",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Arcanine-Hisui"
+        ],
+        "my_party": [
+            "Mienshao",
+            "Ninetales-Alola",
+            "Baxcalibur",
+            "Milotic",
+            "Moltres-Galar",
+            "Heatran"
+        ]
+    },
+    "143": {
+        "opponent_pick": [
+            "Milotic",
+            "Heatran"
+        ],
+        "opponent_start_pick": [
+            "Heatran",
+            "Milotic"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Flutter Mane",
+            "Chi-Yu",
+            "Arcanine-Hisui",
+            "Rillaboom",
+            "Ogerpon-Wellspring"
+        ]
+    },
+    "144": {
+        "opponent_pick": [
+            "Gyarados",
+            "Umbreon",
+            "Talonflame",
+            "Sandy Shocks"
+        ],
+        "opponent_start_pick": [
+            "Talonflame",
+            "Gyarados"
+        ],
+        "my_party": [
+            "Mienshao",
+            "Ninetales-Alola",
+            "Baxcalibur",
+            "Milotic",
+            "Moltres-Galar",
+            "Heatran"
+        ]
+    },
+    "145": {
+        "opponent_pick": [
+            "Milotic",
+            "Heatran",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Heatran",
+            "Milotic"
+        ],
+        "my_party": [
+            "Scizor",
+            "Talonflame",
+            "Gyarados",
+            "Ninetales-Alola",
+            "Umbreon",
+            "Sandy Shocks"
+        ]
+    },
+    "146": {
+        "opponent_pick": [
+            "Gengar",
+            "Cresselia",
+            "Garchomp",
+            "Rotom-Wash"
+        ],
+        "opponent_start_pick": [
+            "Garchomp",
+            "Rotom-Wash"
+        ],
+        "my_party": [
+            "Ting-Lu",
+            "Azumarill",
+            "Umbreon",
+            "Samurott-Hisui",
+            "Breloom",
+            "Ceruledge"
+        ]
+    },
+    "147": {
+        "opponent_pick": [
+            "Breloom",
+            "Ting-Lu",
+            "Azumarill",
+            "Ceruledge"
+        ],
+        "opponent_start_pick": [
+            "Ting-Lu",
+            "Azumarill"
+        ],
+        "my_party": [
+            "Cresselia",
+            "Garchomp",
+            "Rotom-Wash",
+            "Empoleon",
+            "Gengar",
+            "Spiritomb"
+        ]
+    },
+    "148": {
+        "opponent_pick": [
+            "Empoleon",
+            "Cresselia",
+            "Garchomp",
+            "Rotom-Wash"
+        ],
+        "opponent_start_pick": [
+            "Rotom-Wash",
+            "Garchomp"
+        ],
+        "my_party": [
+            "Ting-Lu",
+            "Azumarill",
+            "Umbreon",
+            "Samurott-Hisui",
+            "Breloom",
+            "Ceruledge"
+        ]
+    },
+    "149": {
+        "opponent_pick": [
+            "Samurott-Hisui",
+            "Ting-Lu",
+            "Breloom",
+            "Ceruledge"
+        ],
+        "opponent_start_pick": [
+            "Ting-Lu",
+            "Samurott-Hisui"
+        ],
+        "my_party": [
+            "Cresselia",
+            "Garchomp",
+            "Rotom-Wash",
+            "Empoleon",
+            "Gengar",
+            "Spiritomb"
+        ]
+    },
+    "150": {
+        "opponent_pick": [
+            "Articuno-Galar",
+            "Iron Hands",
+            "Scizor",
+            "Chandelure"
+        ],
+        "opponent_start_pick": [
+            "Chandelure",
+            "Articuno-Galar"
+        ],
+        "my_party": [
+            "Florges-Blue",
+            "Ogerpon-Wellspring",
+            "Volcarona",
+            "Chien-Pao",
+            "Empoleon",
+            "Iron Hands"
+        ]
+    },
+    "151": {
+        "opponent_pick": [
+            "Volcarona",
+            "Chien-Pao",
+            "Ogerpon-Wellspring",
+            "Empoleon"
+        ],
+        "opponent_start_pick": [
+            "Volcarona",
+            "Ogerpon-Wellspring"
+        ],
+        "my_party": [
+            "Scizor",
+            "Iron Hands",
+            "Chandelure",
+            "Chien-Pao",
+            "Cresselia",
+            "Articuno-Galar"
+        ]
+    },
+    "152": {
+        "opponent_pick": [
+            "Pelipper",
+            "Articuno-Galar",
+            "Eelektross",
+            "Urshifu-Rapid-Strike"
+        ],
+        "opponent_start_pick": [
+            "Articuno-Galar",
+            "Pelipper"
+        ],
+        "my_party": [
+            "Slaking",
+            "Grafaiai",
+            "Meowscarada",
+            "Arcanine-Hisui",
+            "Chien-Pao",
+            "Espathra"
+        ]
+    },
+    "153": {
+        "opponent_pick": [
+            "Slaking",
+            "Grafaiai",
+            "Chien-Pao",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Slaking",
+            "Grafaiai"
+        ],
+        "my_party": [
+            "Eelektross",
+            "Pelipper",
+            "Rillaboom",
+            "Gholdengo",
+            "Articuno-Galar",
+            "Urshifu-*"
+        ]
+    },
+    "154": {
+        "opponent_pick": [
+            "Rillaboom",
+            "Heatran",
+            "Dragonite",
+            "Chien-Pao"
+        ],
+        "opponent_start_pick": [
+            "Dragonite",
+            "Chien-Pao"
+        ],
+        "my_party": [
+            "Ursaluna",
+            "Roaring Moon",
+            "Armarouge",
+            "Torkoal",
+            "Indeedee-F",
+            "Bronzong"
+        ]
+    },
+    "155": {
+        "opponent_pick": [
+            "Ursaluna",
+            "Bronzong",
+            "Indeedee-F",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Indeedee-F",
+            "Bronzong"
+        ],
+        "my_party": [
+            "Dragonite",
+            "Chien-Pao",
+            "Rillaboom",
+            "Heatran",
+            "Urshifu-*",
+            "Farigiraf"
+        ]
+    },
+    "156": {
+        "opponent_pick": [
+            "Rillaboom",
+            "Heatran",
+            "Dragonite",
+            "Chien-Pao"
+        ],
+        "opponent_start_pick": [
+            "Chien-Pao",
+            "Dragonite"
+        ],
+        "my_party": [
+            "Ursaluna",
+            "Roaring Moon",
+            "Armarouge",
+            "Torkoal",
+            "Indeedee-F",
+            "Bronzong"
+        ]
+    },
+    "157": {
+        "opponent_pick": [
+            "Ursaluna",
+            "Armarouge",
+            "Indeedee-F",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Indeedee-F",
+            "Armarouge"
+        ],
+        "my_party": [
+            "Dragonite",
+            "Chien-Pao",
+            "Rillaboom",
+            "Heatran",
+            "Urshifu-*",
+            "Farigiraf"
+        ]
+    },
+    "158": {
+        "opponent_pick": [
+            "Rillaboom",
+            "Heatran",
+            "Dragonite",
+            "Chien-Pao"
+        ],
+        "opponent_start_pick": [
+            "Chien-Pao",
+            "Dragonite"
+        ],
+        "my_party": [
+            "Ursaluna",
+            "Roaring Moon",
+            "Armarouge",
+            "Torkoal",
+            "Indeedee-F",
+            "Bronzong"
+        ]
+    },
+    "159": {
+        "opponent_pick": [
+            "Ursaluna",
+            "Armarouge",
+            "Indeedee-F",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Indeedee-F",
+            "Armarouge"
+        ],
+        "my_party": [
+            "Dragonite",
+            "Chien-Pao",
+            "Rillaboom",
+            "Heatran",
+            "Urshifu-*",
+            "Farigiraf"
+        ]
+    },
+    "160": {
+        "opponent_pick": [
+            "Rillaboom",
+            "Heatran",
+            "Urshifu-Rapid-Strike",
+            "Chien-Pao"
+        ],
+        "opponent_start_pick": [
+            "Urshifu-Rapid-Strike",
+            "Chien-Pao"
+        ],
+        "my_party": [
+            "Salamence",
+            "Kingambit",
+            "Rillaboom",
+            "Heatran",
+            "Ogerpon-Wellspring",
+            "Flutter Mane"
+        ]
+    },
+    "161": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Rillaboom",
+            "Salamence"
+        ],
+        "opponent_start_pick": [
+            "Rillaboom",
+            "Flutter Mane"
+        ],
+        "my_party": [
+            "Dragonite",
+            "Chien-Pao",
+            "Rillaboom",
+            "Heatran",
+            "Urshifu-*",
+            "Farigiraf"
+        ]
+    },
+    "162": {
+        "opponent_pick": [
+            "Rillaboom",
+            "Heatran",
+            "Dragonite",
+            "Chien-Pao"
+        ],
+        "opponent_start_pick": [
+            "Dragonite",
+            "Chien-Pao"
+        ],
+        "my_party": [
+            "Ursaluna",
+            "Roaring Moon",
+            "Armarouge",
+            "Torkoal",
+            "Indeedee-F",
+            "Bronzong"
+        ]
+    },
+    "163": {
+        "opponent_pick": [
+            "Ursaluna",
+            "Bronzong",
+            "Indeedee-F",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Indeedee-F",
+            "Bronzong"
+        ],
+        "my_party": [
+            "Dragonite",
+            "Chien-Pao",
+            "Rillaboom",
+            "Heatran",
+            "Urshifu-*",
+            "Farigiraf"
+        ]
+    },
+    "164": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Cresselia",
+            "Ogerpon-Wellspring",
+            "Landorus-Therian"
+        ],
+        "opponent_start_pick": [
+            "Flutter Mane",
+            "Landorus-Therian"
+        ],
+        "my_party": [
+            "Flutter Mane",
+            "Sinistcha-Masterpiece",
+            "Arcanine-Hisui",
+            "Fezandipiti",
+            "Chi-Yu",
+            "Iron Hands"
+        ]
+    },
+    "165": {
+        "opponent_pick": [
+            "Sinistcha-Masterpiece",
+            "Iron Hands",
+            "Fezandipiti",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Iron Hands",
+            "Arcanine-Hisui"
+        ],
+        "my_party": [
+            "Annihilape",
+            "Cresselia",
+            "Flutter Mane",
+            "Landorus-Therian",
+            "Amoonguss",
+            "Ogerpon-Wellspring"
+        ]
+    },
+    "166": {
+        "opponent_pick": [
+            "Grimmsnarl",
+            "Landorus-Therian",
+            "Thundurus"
+        ],
+        "opponent_start_pick": [
+            "Thundurus",
+            "Landorus-Therian"
+        ],
+        "my_party": [
+            "Indeedee-F",
+            "Armarouge",
+            "Torkoal",
+            "Ursaluna-Bloodmoon",
+            "Iron Hands",
+            "Sinistcha"
+        ]
+    },
+    "167": {
+        "opponent_pick": [
+            "Armarouge",
+            "Indeedee-F",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Indeedee-F",
+            "Armarouge"
+        ],
+        "my_party": [
+            "Thundurus",
+            "Chesnaught",
+            "Basculegion",
+            "Pelipper",
+            "Landorus-Therian",
+            "Grimmsnarl"
+        ]
+    },
+    "168": {
+        "opponent_pick": [
+            "Tornadus",
+            "Heatran",
+            "Ogerpon-Wellspring",
+            "Urshifu"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Ogerpon-Wellspring"
+        ],
+        "my_party": [
+            "Gothitelle",
+            "Politoed",
+            "Urshifu-*",
+            "Scream Tail",
+            "Tinkaton",
+            "Ceruledge"
+        ]
+    },
+    "169": {
+        "opponent_pick": [
+            "Gothitelle",
+            "Ceruledge",
+            "Tinkaton",
+            "Scream Tail"
+        ],
+        "opponent_start_pick": [
+            "Gothitelle",
+            "Scream Tail"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Farigiraf",
+            "Ogerpon-Wellspring",
+            "Urshifu-*",
+            "Heatran",
+            "Sylveon"
+        ]
+    },
+    "170": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Sandy Shocks",
+            "Arcanine",
+            "Amoonguss"
+        ],
+        "opponent_start_pick": [
+            "Amoonguss",
+            "Sandy Shocks"
+        ],
+        "my_party": [
+            "Amoonguss",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Flutter Mane",
+            "Heatran",
+            "Chien-Pao"
+        ]
+    },
+    "171": {
+        "opponent_pick": [
+            "Landorus-Therian",
+            "Flutter Mane",
+            "Iron Hands",
+            "Amoonguss"
+        ],
+        "opponent_start_pick": [
+            "Iron Hands",
+            "Flutter Mane"
+        ],
+        "my_party": [
+            "Grimmsnarl",
+            "Palafin",
+            "Flutter Mane",
+            "Sandy Shocks",
+            "Arcanine",
+            "Amoonguss"
+        ]
+    },
+    "172": {
+        "opponent_pick": [
+            "Farigiraf",
+            "Bellibolt",
+            "Iron Bundle",
+            "Arboliva"
+        ],
+        "opponent_start_pick": [
+            "Farigiraf",
+            "Iron Bundle"
+        ],
+        "my_party": [
+            "Amoonguss",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Flutter Mane",
+            "Heatran",
+            "Chien-Pao"
+        ]
+    },
+    "173": {
+        "opponent_pick": [
+            "Landorus-Therian",
+            "Heatran",
+            "Iron Hands",
+            "Amoonguss"
+        ],
+        "opponent_start_pick": [
+            "Landorus-Therian",
+            "Amoonguss"
+        ],
+        "my_party": [
+            "Bellibolt",
+            "Arboliva",
+            "Farigiraf",
+            "Iron Bundle",
+            "Urshifu-*",
+            "Ogerpon-Hearthflame"
+        ]
+    },
+    "174": {
+        "opponent_pick": [
+            "Farigiraf",
+            "Ogerpon-Cornerstone",
+            "Rillaboom",
+            "Torkoal"
+        ],
+        "opponent_start_pick": [
+            "Ogerpon-Cornerstone",
+            "Farigiraf"
+        ],
+        "my_party": [
+            "Amoonguss",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Flutter Mane",
+            "Heatran",
+            "Chien-Pao"
+        ]
+    },
+    "175": {
+        "opponent_pick": [
+            "Iron Hands",
+            "Flutter Mane",
+            "Heatran",
+            "Landorus-Therian"
+        ],
+        "opponent_start_pick": [
+            "Flutter Mane",
+            "Heatran"
+        ],
+        "my_party": [
+            "Torkoal",
+            "Rillaboom",
+            "Ogerpon-Cornerstone",
+            "Flutter Mane",
+            "Zapdos-Galar",
+            "Farigiraf"
+        ]
+    },
+    "176": {
+        "opponent_pick": [
+            "Gardevoir",
+            "Ogerpon-Wellspring",
+            "Iron Hands",
+            "Ninetales-Alola"
+        ],
+        "opponent_start_pick": [
+            "Gardevoir",
+            "Ninetales-Alola"
+        ],
+        "my_party": [
+            "Urshifu-*",
+            "Iron Hands",
+            "Tornadus",
+            "Arcanine-Hisui",
+            "Flutter Mane",
+            "Chien-Pao"
+        ]
+    },
+    "177": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Urshifu-Rapid-Strike",
+            "Chien-Pao",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Arcanine-Hisui",
+            "Flutter Mane"
+        ],
+        "my_party": [
+            "Gardevoir",
+            "Iron Hands",
+            "Ninetales-Alola",
+            "Landorus-Therian",
+            "Ogerpon-Wellspring",
+            "Flutter Mane"
+        ]
+    },
+    "178": {
+        "opponent_pick": [
+            "Regidrago",
+            "Ursaluna",
+            "Cresselia"
+        ],
+        "opponent_start_pick": [
+            "Cresselia",
+            "Ursaluna"
+        ],
+        "my_party": [
+            "Tornadus",
+            "Flutter Mane",
+            "Roaring Moon",
+            "Iron Hands",
+            "Landorus-Therian",
+            "Gholdengo"
+        ]
+    },
+    "179": {
+        "opponent_pick": [
+            "Gholdengo",
+            "Tornadus",
+            "Flutter Mane",
+            "Landorus-Therian"
+        ],
+        "opponent_start_pick": [
+            "Tornadus",
+            "Flutter Mane"
+        ],
+        "my_party": [
+            "Talonflame",
+            "Regidrago",
+            "Bruxish",
+            "Kingambit",
+            "Cresselia",
+            "Ursaluna"
+        ]
+    },
+    "180": {
+        "opponent_pick": [
+            "Landorus-Therian",
+            "Regidrago",
+            "Ursaluna-Bloodmoon",
+            "Indeedee-F"
+        ],
+        "opponent_start_pick": [
+            "Indeedee-F",
+            "Regidrago"
+        ],
+        "my_party": [
+            "Rabsca",
+            "Annihilape",
+            "Garganacl",
+            "Lurantis",
+            "Illumise",
+            "Heatran"
+        ]
+    },
+    "181": {
+        "opponent_pick": [
+            "Annihilape",
+            "Lurantis",
+            "Garganacl",
+            "Rabsca"
+        ],
+        "opponent_start_pick": [
+            "Rabsca",
+            "Annihilape"
+        ],
+        "my_party": [
+            "Indeedee-F",
+            "Armarouge",
+            "Regidrago",
+            "Landorus-Therian",
+            "Ursaluna-Bloodmoon",
+            "Tornadus"
+        ]
+    },
+    "182": {
+        "opponent_pick": [
+            "Iron Hands",
+            "Farigiraf",
+            "Ogerpon-Wellspring",
+            "Roaring Moon"
+        ],
+        "opponent_start_pick": [
+            "Ogerpon-Wellspring",
+            "Roaring Moon"
+        ],
+        "my_party": [
+            "Chi-Yu",
+            "Iron Bundle",
+            "Rillaboom",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Flutter Mane"
+        ]
+    },
+    "183": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Landorus-Therian",
+            "Iron Bundle",
+            "Iron Hands"
+        ],
+        "opponent_start_pick": [
+            "Iron Bundle",
+            "Iron Hands"
+        ],
+        "my_party": [
+            "Zapdos",
+            "Iron Hands",
+            "Farigiraf",
+            "Ogerpon-Wellspring",
+            "Roaring Moon",
+            "Kingambit"
+        ]
+    },
+    "184": {
+        "opponent_pick": [
+            "Farigiraf",
+            "Iron Bundle",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Farigiraf",
+            "Iron Bundle"
+        ],
+        "my_party": [
+            "Chi-Yu",
+            "Iron Bundle",
+            "Rillaboom",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Flutter Mane"
+        ]
+    },
+    "185": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Rillaboom",
+            "Landorus-Therian",
+            "Chi-Yu"
+        ],
+        "opponent_start_pick": [
+            "Flutter Mane",
+            "Rillaboom"
+        ],
+        "my_party": [
+            "Chesnaught",
+            "Farigiraf",
+            "Urshifu-*",
+            "Dusclops",
+            "Chi-Yu",
+            "Iron Bundle"
+        ]
+    },
+    "186": {
+        "opponent_pick": [
+            "Milotic",
+            "Flamigo",
+            "Dragapult",
+            "Golduck"
+        ],
+        "opponent_start_pick": [
+            "Milotic",
+            "Dragapult"
+        ],
+        "my_party": [
+            "Dudunsparce-*",
+            "Grafaiai",
+            "Annihilape",
+            "Klefki",
+            "Ogerpon-Wellspring",
+            "Gothitelle"
+        ]
+    },
+    "187": {
+        "opponent_pick": [
+            "Annihilape",
+            "Dudunsparce",
+            "Grafaiai",
+            "Klefki"
+        ],
+        "opponent_start_pick": [
+            "Dudunsparce",
+            "Klefki"
+        ],
+        "my_party": [
+            "Milotic",
+            "Flamigo",
+            "Medicham",
+            "Dragapult",
+            "Golduck",
+            "Komala"
+        ]
+    },
+    "188": {
+        "opponent_pick": [
+            "Politoed",
+            "Scovillain",
+            "Gliscor",
+            "Palafin"
+        ],
+        "opponent_start_pick": [
+            "Scovillain",
+            "Palafin"
+        ],
+        "my_party": [
+            "Slaking",
+            "Weezing",
+            "Rotom-Heat",
+            "Kommo-o",
+            "Froslass",
+            "Amoonguss"
+        ]
+    },
+    "189": {
+        "opponent_pick": [
+            "Rotom-Heat",
+            "Kommo-o",
+            "Amoonguss",
+            "Froslass"
+        ],
+        "opponent_start_pick": [
+            "Kommo-o",
+            "Rotom-Heat"
+        ],
+        "my_party": [
+            "Palafin",
+            "Scovillain",
+            "Gliscor",
+            "Muk-Alola",
+            "Flamigo",
+            "Politoed"
+        ]
+    },
+    "190": {
+        "opponent_pick": [
+            "Flamigo",
+            "Muk-Alola",
+            "Scovillain",
+            "Palafin"
+        ],
+        "opponent_start_pick": [
+            "Scovillain",
+            "Palafin"
+        ],
+        "my_party": [
+            "Slaking",
+            "Weezing",
+            "Rotom-Heat",
+            "Kommo-o",
+            "Froslass",
+            "Amoonguss"
+        ]
+    },
+    "191": {
+        "opponent_pick": [
+            "Rotom-Heat",
+            "Kommo-o",
+            "Amoonguss",
+            "Froslass"
+        ],
+        "opponent_start_pick": [
+            "Kommo-o",
+            "Amoonguss"
+        ],
+        "my_party": [
+            "Palafin",
+            "Scovillain",
+            "Gliscor",
+            "Muk-Alola",
+            "Flamigo",
+            "Politoed"
+        ]
+    },
+    "192": {
+        "opponent_pick": [
+            "Politoed",
+            "Scovillain",
+            "Gliscor",
+            "Palafin"
+        ],
+        "opponent_start_pick": [
+            "Scovillain",
+            "Palafin"
+        ],
+        "my_party": [
+            "Slaking",
+            "Weezing",
+            "Rotom-Heat",
+            "Kommo-o",
+            "Froslass",
+            "Amoonguss"
+        ]
+    },
+    "193": {
+        "opponent_pick": [
+            "Rotom-Heat",
+            "Kommo-o",
+            "Amoonguss",
+            "Froslass"
+        ],
+        "opponent_start_pick": [
+            "Kommo-o",
+            "Rotom-Heat"
+        ],
+        "my_party": [
+            "Palafin",
+            "Scovillain",
+            "Gliscor",
+            "Muk-Alola",
+            "Flamigo",
+            "Politoed"
+        ]
+    },
+    "194": {
+        "opponent_pick": [
+            "Landorus-Therian",
+            "Kingambit",
+            "Sinistcha-Masterpiece"
+        ],
+        "opponent_start_pick": [
+            "Kingambit",
+            "Landorus-Therian"
+        ],
+        "my_party": [
+            "Arcanine-Hisui",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Cresselia",
+            "Ogerpon-Wellspring",
+            "Flutter Mane"
+        ]
+    },
+    "195": {
+        "opponent_pick": [
+            "Flutter Mane",
+            "Landorus-Therian",
+            "Iron Hands",
+            "Arcanine-Hisui"
+        ],
+        "opponent_start_pick": [
+            "Landorus-Therian",
+            "Flutter Mane"
+        ],
+        "my_party": [
+            "Volcarona",
+            "Kingambit",
+            "Iron Hands",
+            "Sinistcha-Masterpiece",
+            "Landorus-Therian",
+            "Chien-Pao"
+        ]
+    }
+}
