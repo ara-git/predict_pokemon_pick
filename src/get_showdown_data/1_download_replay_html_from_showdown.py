@@ -35,7 +35,7 @@ def download_replay_html_from_showdown():
 
     # DL先を指定する
     ## 絶対パスで指定する必要があるので、相対から変換する
-    abs_path = os.path.abspath("./data/ShowDown_html")
+    abs_path = os.path.abspath("./data/input/stock/ShowDown_html")
     prefs = {"download.default_directory": abs_path}
     options.add_experimental_option("prefs", prefs)
 
@@ -59,17 +59,14 @@ def download_replay_html_from_showdown():
             ).click()
 
             # 5秒待機
-            time.sleep(5)
+            time.sleep(4)
             print(i / n)
         except:
             # 5秒待機
-            time.sleep(5)
+            time.sleep(4)
             pass
-
-    return pd.DataFrame(["empty_file"])
 
 
 if __name__ == "__main__":
-    # リプレイのurlを取得する
-
-    replay_urls = download_replay_html_from_showdown()
+    # リプレイのurlから、htmlをDLする。
+    download_replay_html_from_showdown()

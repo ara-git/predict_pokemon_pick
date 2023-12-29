@@ -11,16 +11,7 @@ def retrieve_party_from_html():
     Augs:
 
     Returns:
-        dark_urshifu_party_df: 悪ウーラオス入り構築のデータ
-        water_urshifu_party_df: 水ウーラオス入り構築のデータ
     """
-
-    poke_data_sheet_df = pd.read_csv("./data/input/pokemon_stat_generation9_all.csv")
-
-    poke_name_jp_en_dict = dict(
-        zip(poke_data_sheet_df["English"], poke_data_sheet_df["Japanese"])
-    )
-
     # フォルダ内部のファイル一覧を取得する
     files_list = glob.glob("data/input/ShowDown_html/*")
 
@@ -56,15 +47,17 @@ def retrieve_party_from_html():
             "データを整形する"
             if side == "my":
                 "my 側で考える"
-                # 相手の選出と自分の構築を取得
+                # 相手の選出・構築と自分の構築を取得
                 my_party_list = pick_dict["my"][0]
+                opponent_party_list = pick_dict["opponent"][0]
                 opponent_pick_list = pick_dict["opponent"][1]
                 opponent_start_pick_list = pick_dict["opponent"][2]
 
             else:
                 "opponent 側で考える"
-                # 相手の選出と自分の構築を取得
+                # 相手の選出・構築と自分の構築を取得
                 my_party_list = pick_dict["opponent"][0]
+                opponent_party_list = pick_dict["my"][0]
                 opponent_pick_list = pick_dict["my"][1]
                 opponent_start_pick_list = pick_dict["my"][2]
 
@@ -73,6 +66,7 @@ def retrieve_party_from_html():
                 "opponent_pick": opponent_pick_list,
                 "opponent_start_pick": opponent_start_pick_list,
                 "my_party": my_party_list,
+                "opponent_party": opponent_party_list,
             }
             count += 1
 

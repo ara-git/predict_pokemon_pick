@@ -1,2 +1,4 @@
 *.ipynb
 *.html
+old/
+tmp/
