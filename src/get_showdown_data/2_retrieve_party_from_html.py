@@ -13,7 +13,7 @@ def retrieve_party_from_html():
     Returns:
     """
     # フォルダ内部のファイル一覧を取得する
-    files_list = glob.glob("data/input/ShowDown_html/*")
+    files_list = glob.glob("data/input/stock/ShowDown_html/*")
 
     # （自分の選出、自分の先発、相手の構築）をまとめたデータの格納先辞書
     result_dict = {}
@@ -39,7 +39,14 @@ def retrieve_party_from_html():
             start_picked_poke_list, picked_poke_list = get_poke_pick(
                 battle_log_str, side
             )
-
+            # ウーラオス（"Urshifu"から始まるポケモン）はすべて、"Urshifu"として登録する
+            party_list = ["Urshifu" if "Urshifu" in x else x for x in party_list]
+            start_picked_poke_list = [
+                "Urshifu" if "Urshifu" in x else x for x in start_picked_poke_list
+            ]
+            picked_poke_list = [
+                "Urshifu" if "Urshifu" in x else x for x in picked_poke_list
+            ]
             # サイドをキー、（構築、選出、初期選出）を値とした辞書を作成
             pick_dict[side] = (party_list, picked_poke_list, start_picked_poke_list)
 
@@ -142,6 +149,6 @@ if __name__ == "__main__":
     result_dict = retrieve_party_from_html()
 
     # 構築と選出の情報をcsvで出力する
-    with open("./data/intermediate/pick_and_party_data.json", mode="w") as f:
+    with open("./data/intermediate/0_original/pick_and_party_data.json", mode="w") as f:
         d = json.dumps(result_dict)
         f.write(d)
