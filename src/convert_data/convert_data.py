@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import json
+import collections
 
 
 class convert_data:
@@ -8,9 +9,10 @@ class convert_data:
         # jsonファイルを読み込む
         self._read_json_files()
 
-        # ポケモンのタイプを取得
-        a = self._get_type(poke_name="Chi-Yu")
+        # 計算対象とする、データが十分に集まったポケモンを調べる
+        self._extract_major_poke()
 
+        print("データが十分に集まったポケモン:", self.major_poke_list)
         return
 
     def _read_json_files(self):
@@ -43,15 +45,14 @@ class convert_data:
         ポケモン名を入力として、タイプのリストを返す
         """
         # ポケモン名を正規化
-        poke_name = poke_name.replace("-", "")
-        poke_name = poke_name.replace(" ", "")
-        poke_name = poke_name.lower()
+        poke_name = self._standardize_poke_name(poke_name)
+
+        if poke_name == "urshifu":
+            # ウーラオスは例外処理として、3タイプ分計上
+            return ["Dark", "Water", "Fighting"]
 
         if poke_name in self.pokedex.keys():
             return self.pokedex[poke_name]["types"]
-        elif poke_name == "urshifu*":
-            # ウーラオスは例外処理として、3タイプ分計上
-            return ["Dark", "Water", "Fighting"]
         else:
             print(poke_name, "は図鑑にないポケモンです")
 
@@ -60,15 +61,10 @@ class convert_data:
         ポケモン名を入力として、タイプのリストを返す
         """
         # ポケモン名を正規化
-        poke_name = poke_name.replace("-", "")
-        poke_name = poke_name.replace(" ", "")
-        poke_name = poke_name.lower()
+        poke_name = self._standardize_poke_name(poke_name)
 
         if poke_name in self.pokedex.keys():
             return self.pokedex[poke_name]["baseStats"]["spe"]
-        elif poke_name == "urshifu*":
-            # ウーラオスは例外処理として、97で計上
-            return 97
         else:
             print(poke_name, "は図鑑にないポケモンです")
 
@@ -77,17 +73,59 @@ class convert_data:
         ポケモン名を入力として、特性のリストを返す
         """
         # ポケモン名を正規化
+        poke_name = self._standardize_poke_name(poke_name)
+
+        if poke_name in self.pokedex.keys():
+            return self.pokedex[poke_name]["abilities"].values
+        else:
+            print(poke_name, "は図鑑にないポケモンです")
+
+    def _standardize_poke_name(self, poke_name):
+        """
+        ポケモンの名前を正規化する
+        """
+        # ポケモン名を正規化
         poke_name = poke_name.replace("-", "")
         poke_name = poke_name.replace(" ", "")
         poke_name = poke_name.lower()
 
-        if poke_name in self.pokedex.keys():
-            return self.pokedex[poke_name]["abilities"].values
-        elif poke_name == "urshifu*":
-            # ウーラオスは例外処理
-            return ["Unseen Fist"]
-        else:
-            print(poke_name, "は図鑑にないポケモンです")
+        "例外処理"
+        # トリトドン
+        if "gastrodon" in poke_name:
+            poke_name = "gastrodon"
+
+        # フラージェス
+        if "florges" in poke_name:
+            poke_name = "florges"
+
+        # ゲッコウガ
+        if "greninja" in poke_name:
+            poke_name = "greninja"
+
+        if "tatsugiri" in poke_name:
+            poke_name = "tatsugiri"
+        return poke_name
+
+    def _extract_major_poke(self):
+        """
+        データが十分に集まったポケモンを抽出する
+        """
+        # 全構築データ内のポケモンをリスト化して集計
+        poke_list = []
+        for data_index, data in self.pick_and_party.items():
+            poke_list += data["opponent_party"]
+
+        # データ数の辞書に直す
+        poke_dict = collections.Counter(poke_list)
+
+        major_poke_list = []
+
+        for key, value in poke_dict.items():
+            # データが50個以上存在しているなら、計算対象とする
+            if value >= 50:
+                major_poke_list.append(key)
+
+        self.major_poke_list = major_poke_list
 
     def make_DataFrame(self, poke_name):
         """
@@ -95,6 +133,7 @@ class convert_data:
         poke_name: 分析対象（選出予測する対象となる）ポケモン
         """
         picked_TF_df = pd.DataFrame([])
+        start_picked_TF_df = pd.DataFrame([])
         type_count_df = pd.DataFrame([])
         max_speed_df = pd.DataFrame([])
         mean_speed_df = pd.DataFrame([])
@@ -110,6 +149,9 @@ class convert_data:
             if poke_name in data["opponent_party"]:
                 "選出されたかどうか"
                 picked_TF = int(poke_name in data["opponent_pick"])
+
+                "初手に選出されたかどうか"
+                start_picked_TF = int(poke_name in data["opponent_start_pick"])
 
                 "自構築内のタイプの数をカウントする"
                 type_count_dict = dict(zip(self.all_types, [0] * len(self.all_types)))
@@ -162,6 +204,11 @@ class convert_data:
             "DataFrameに変換し、下に蓄積する"
             # 選出されたかどうか
             picked_TF_df = pd.concat([picked_TF_df, pd.DataFrame([picked_TF])])
+
+            # 初手に選出されたかどうか
+            start_picked_TF_df = pd.concat(
+                [start_picked_TF_df, pd.DataFrame([start_picked_TF])]
+            )
             # タイプカウント
             type_count_df = pd.concat(
                 [type_count_df, pd.DataFrame([type_count_dict])], axis=0
@@ -191,6 +238,7 @@ class convert_data:
 
         # 手直し
         picked_TF_df.columns = ["picked"]
+        start_picked_TF_df.columns = ["start_pick"]
         max_speed_df.columns = ["max_speed"]
         mean_speed_df.columns = ["mean_speed"]
         min_speed_df.columns = ["min_speed"]
@@ -203,6 +251,7 @@ class convert_data:
         result_df = pd.concat(
             [
                 picked_TF_df,
+                start_picked_TF_df,
                 type_count_df,
                 max_speed_df,
                 mean_speed_df,
@@ -222,5 +271,11 @@ class convert_data:
 
 if __name__ == "__main__":
     instance = convert_data()
-    df = instance.make_DataFrame(poke_name="Urshifu")
-    df.to_csv("./data/intermediate/1_preprocessed/preprocessed.csv")
+
+    for object_poke_name in instance.major_poke_list:
+        df = instance.make_DataFrame(poke_name=object_poke_name)
+        df.to_csv(
+            "./data/intermediate/1_preprocessed/preprocessed_"
+            + object_poke_name
+            + ".csv"
+        )
