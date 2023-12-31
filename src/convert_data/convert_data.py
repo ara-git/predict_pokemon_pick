@@ -142,6 +142,7 @@ class convert_data:
         Tornadus_Urshifu_df = pd.DataFrame([])
         FlutterMane_ChiYu_df = pd.DataFrame([])
         Indeedee_Armarouge_df = pd.DataFrame([])
+        my_party_df = pd.DataFrame([])
 
         # 対戦単位ごとに読み込み、特徴量を作成する
         for data_index, data in self.pick_and_party.items():
@@ -188,7 +189,7 @@ class convert_data:
 
                 # カミイーユイ
                 FlutterMane_ChiYu_TF = int(
-                    ("FlutterMane" in data["my_party"])
+                    ("Flutter Mane" in data["my_party"])
                     and ("Chi-Yu" in data["my_party"])
                 )
 
@@ -235,6 +236,7 @@ class convert_data:
             Indeedee_Armarouge_df = pd.concat(
                 [Indeedee_Armarouge_df, pd.DataFrame([Indeedee_Armarouge_TF])]
             )
+            my_party_df = pd.concat([my_party_df, [data["my_party"]]], axis=0)
 
         # 手直し
         picked_TF_df.columns = ["picked"]
@@ -246,6 +248,7 @@ class convert_data:
         Tornadus_Urshifu_df.columns = ["Tornadus_Urshifu"]
         FlutterMane_ChiYu_df.columns = ["FlutterMane_ChiYu"]
         Indeedee_Armarouge_df.columns = ["Indeedee_Armarouge"]
+        my_party_df.columns = ["my_party"]
 
         # 特徴量のデータフレームを横に結合する
         result_df = pd.concat(
