@@ -120,6 +120,7 @@ class split_train_test:
         作成したモデルを分析する
         """
         if self.model == "LR":
+            "LRの係数を出力する"
             #回帰係数を格納したpandasDataFrameの表示
             df_coef =  pd.DataFrame({'coefficient':self.LR_model.coef_.flatten()}, index=self.X.columns)
             df_coef['coef_abs'] = abs(df_coef['coefficient'])
@@ -130,7 +131,7 @@ class split_train_test:
             plt.clf()
             x_pos = np.arange(len(df_coef))
 
-            fig = plt.figure(figsize=(6,6))
+            fig = plt.figure(figsize=(10,6))
             ax1 = fig.add_subplot(1, 1, 1)
             ax1.barh(x_pos, df_coef['coefficient'], color='b')
             ax1.set_title('coefficient of variables',fontsize=18)
@@ -144,14 +145,13 @@ class split_train_test:
             plt.savefig("./data/LR_coef/LR_coef_" + self.predict_object_column + "_" + self.poke_name + ".jpg")
             
         elif self.model == "GBDT":
-            "（おまけ）特徴量の重要度を出力する"
+            "特徴量の重要度を出力する"
             # 重要度をモデルから抽出
             importance_df = pd.DataFrame(self.GBDT_model.feature_importance(), index = self.X_train.columns, columns = ["importance"])
             # 特に重要なものだけ抜き出す
             importance_df.sort_values("importance", inplace = True, ascending = False)
             importance_df = importance_df.head(5)
-            print(importance_df)
-
+           
             # 棒グラフにして出力
             plt.clf()
             plt.bar(x = importance_df.index, height = importance_df["importance"])
