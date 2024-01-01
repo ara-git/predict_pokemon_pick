@@ -131,7 +131,7 @@ class split_train_test:
             plt.clf()
             x_pos = np.arange(len(df_coef))
 
-            fig = plt.figure(figsize=(10,6))
+            fig = plt.figure(figsize=(15,6))
             ax1 = fig.add_subplot(1, 1, 1)
             ax1.barh(x_pos, df_coef['coefficient'], color='b')
             ax1.set_title('coefficient of variables',fontsize=18)
