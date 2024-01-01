@@ -236,7 +236,8 @@ class convert_data:
             Indeedee_Armarouge_df = pd.concat(
                 [Indeedee_Armarouge_df, pd.DataFrame([Indeedee_Armarouge_TF])]
             )
-            my_party_df = pd.concat([my_party_df, [data["my_party"]]], axis=0)
+            # 自分の構築を参考情報として残す
+            my_party_df = pd.concat([my_party_df, pd.DataFrame([str(data["my_party"])])], axis=0)
 
         # 手直し
         picked_TF_df.columns = ["picked"]
@@ -263,6 +264,7 @@ class convert_data:
                 Tornadus_Urshifu_df,
                 FlutterMane_ChiYu_df,
                 Indeedee_Armarouge_df,
+                my_party_df
             ],
             axis=1,
         )
