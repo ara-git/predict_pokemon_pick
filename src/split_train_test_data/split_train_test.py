@@ -83,17 +83,20 @@ class split_train_test:
 
 
 if __name__ == "__main__":
-    # 対象のポケモンについて、インスタンスを作成
-    instance = split_train_test("Incineroar")
-
-    # データを分割
-    instance.split_data()
-
-    # データ学習
-    instance.train_data_logistic()
-
-    # 予測を行う
-    instance.predict_data()
-
-    # 結果を評価する
-    instance.evaluate_test()
+    # 分析対象にできる、充分にデータが集まったポケモンのリストを作る
+    object_poke_list = pd.read_csv("./data/intermediate/1_preprocessed/major_poke.csv")["poke_name"]
+    
+    for poke_name in object_poke_list:
+        # 分析対象とする各ポケモンについて、学習とテストを行う
+        print(poke_name)
+        
+        # 対象のポケモンについて、インスタンスを作成
+        instance = split_train_test(poke_name)
+        # データを分割
+        instance.split_data()
+        # データ学習
+        instance.train_data_logistic()
+        # 予測を行う
+        instance.predict_data()
+        # 結果を評価する
+        instance.evaluate_test()

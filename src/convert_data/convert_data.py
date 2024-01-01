@@ -127,6 +127,9 @@ class convert_data:
 
         self.major_poke_list = major_poke_list
 
+        # csvファイルとして保存する
+        pd.DataFrame(self.major_poke_list, columns = ["poke_name"]).to_csv("./data/intermediate/1_preprocessed/major_poke.csv")
+
     def make_DataFrame(self, poke_name):
         """
         対戦データをDataframe形式に変換する
