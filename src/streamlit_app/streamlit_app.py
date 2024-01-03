@@ -83,7 +83,7 @@ class streamlit_app:
             my_party_list.append(my_party_poke)
         self.my_party_list = my_party_list
                 
-        "横に2列並べる"
+        # 横に2列並べる
         self.col_0, self.col_1 = st.columns((1, 2))
 
         # 1列目
@@ -123,7 +123,7 @@ class streamlit_app:
                 # 説明変数を選択
                 X = self.converted_streamlit_input_df.drop(['start_pick', "picked", "my_party", "mean_speed"] ,axis=1)
 
-                "Logistic Regression"
+                # Logistic Regression
                 # 標準化に使うScalerを解凍
                 scaler_X = pickle.load(open("./data/LR_scaler/scaler_" + object_poke_name + ".pkl", "rb"))
                 # 説明変数を標準化
