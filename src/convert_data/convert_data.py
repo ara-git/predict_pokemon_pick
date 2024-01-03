@@ -26,7 +26,6 @@ class convert_data:
         elif self.mode == "streamlit_mode":
             # "streamlit_mode"の時、jsonファイルの代わりに、streamlitの入力を使う（"self.pick_and_party"を上書きする）
             self.pick_and_party = self.streamlit_input    
-            print(self.pick_and_party)
 
     def _read_json_files(self):
         """JSONファイルを読み込む"""

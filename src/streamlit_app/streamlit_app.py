@@ -6,6 +6,7 @@ import os
 import sys
 import pickle
 from sklearn.linear_model import LogisticRegression
+import plotly.express as px
 from importlib import reload
 
 # 自作モジュール
@@ -26,9 +27,15 @@ class streamlit_app:
         self._convert_data()
         # アプリで入力した情報を基に、選出されるか予測する
         self._predict_pick()
-        # 
+        # 予測値をアプリ上に出力する
         with self.col_1:
-            st.bar_chart(self.pred_result_df)
+            st.subheader("選出確率と初期選出確率")
+            ## Plotlyを使って棒グラフを作成する
+            fig = px.bar(self.pred_result_df, y=["picked", "start_pick"], barmode = "group")
+            fig.update_layout(    
+                xaxis=dict(title=''),
+                yaxis=dict(title=''))
+            st.plotly_chart(fig)
 
     def _convert_data(self):
         """
@@ -40,7 +47,7 @@ class streamlit_app:
         # 自作モジュールを呼び出し、Dataframe形式に加工する
         convert_data_instance = convert_data.convert_data(mode = "streamlit_mode", streamlit_input = self.actual_pick_and_party)
         self.converted_streamlit_input_df = convert_data_instance.make_DataFrame()
-        st.write(self.converted_streamlit_input_df)
+        # st.write(self.converted_streamlit_input_df)
 
     def _read_data(self):
         """
@@ -77,7 +84,7 @@ class streamlit_app:
         self.my_party_list = my_party_list
                 
         "横に2列並べる"
-        self.col_0, self.col_1 = st.columns((1, 1))
+        self.col_0, self.col_1 = st.columns((1, 2))
 
         # 1列目
         with self.col_0:
@@ -93,45 +100,43 @@ class streamlit_app:
                 opponent_party_list.append(opponent_party_poke)
             self.opponent_party_list = opponent_party_list
 
+            # 重複するデータは消去する（順序はそのまま）
+            self.opponent_party_list = list(dict.fromkeys(self.opponent_party_list))
+
     def _predict_pick(self):
         """
         選出確率を予測する
         """
-        # 予測対象とする変数
-        self.predict_object_column = "start_pick"
-        
-        # 被説明変数を選択
-        y = self.converted_streamlit_input_df.loc[:, self.predict_object_column]
+        # 結果を格納するDF
+        self.pred_result_df = pd.DataFrame([], index = self.opponent_party_list)
 
-        # 予測結果を格納するリスト
-        pred_result_list = []
+        # 予測対象とする変数を変えながら予測
+        for predict_object_column in ["start_pick", "picked"]:
+            # 予測結果を格納するリスト
+            pred_result_list = []
 
-        # 予測対象とするポケモンを変えながら予測
-        for object_poke_name in self.opponent_party_list:
-            # 説明変数を選択
-            X = self.converted_streamlit_input_df.drop(['start_pick', "picked", "my_party", "mean_speed"] ,axis=1)
+            # 被説明変数を選択
+            y = self.converted_streamlit_input_df.loc[:, predict_object_column]
 
-            "Logistic Regression"
-            # 標準化に使うScalerを解凍
-            st.write(object_poke_name)
-            scaler_X = pickle.load(open("./data/LR_scaler/scaler_" + object_poke_name + ".pkl", "rb"))
-            # 説明変数を標準化
-            X = scaler_X.transform(X)
-            # 予測器を解凍
-            LR_model = pickle.load(open("./data/trained_models/LR_model_" + self.predict_object_column + "_" + object_poke_name + ".pkl", 'rb'))
+            # 予測対象とするポケモンを変えながら予測
+            for object_poke_name in self.opponent_party_list:
+                # 説明変数を選択
+                X = self.converted_streamlit_input_df.drop(['start_pick', "picked", "my_party", "mean_speed"] ,axis=1)
 
-            # 予測（確率で返す）
-            y_pred = LR_model.predict_proba(X)[0][1]
-            pred_result_list.append(y_pred)
-        
-        self.pred_result_df = pd.DataFrame(pred_result_list, index = self.opponent_party_list, columns = ["prob"])
+                "Logistic Regression"
+                # 標準化に使うScalerを解凍
+                scaler_X = pickle.load(open("./data/LR_scaler/scaler_" + object_poke_name + ".pkl", "rb"))
+                # 説明変数を標準化
+                X = scaler_X.transform(X)
+                # 予測器を解凍
+                LR_model = pickle.load(open("./data/trained_models/LR_model_" + predict_object_column + "_" + object_poke_name + ".pkl", 'rb'))
 
+                # 予測（確率で返す）
+                y_pred = LR_model.predict_proba(X)[0][1]
+                pred_result_list.append(y_pred)
+
+     
+            self.pred_result_df[predict_object_column] = pred_result_list
+
+# アプリを実行
 instance = streamlit_app()
-
-"""
-# 合計ボタン
-if st.button("合計"):
-    # 合計ボタンが押されたら数値を合計し表示
-    total = value_1 + value_2
-    st.write(f"合計値: {total}")
-"""

@@ -191,7 +191,7 @@ if __name__ == "__main__":
         print("poke_name:", poke_name)
 
         # 対象のポケモンについて、インスタンスを作成
-        instance = split_train_test(poke_name = poke_name, predict_object_column = "start_pick")
+        instance = split_train_test(poke_name = poke_name, predict_object_column = "picked")
 
         # 複数モデルで学習、予測を行う
         for model in ["LR", "GBDT"]:
