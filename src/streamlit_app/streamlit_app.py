@@ -7,7 +7,7 @@ import sys
 import pickle
 from sklearn.linear_model import LogisticRegression
 import plotly.express as px
-from importlib import reload
+# from importlib import reload
 
 # 自作モジュール
 # 上位階層のフォルダを読み込むために、対象を増やす
@@ -15,7 +15,7 @@ sys.path.append("./src")
 from convert_data import convert_data
 # from split_train_test_data import split_train_test
 
-reload(convert_data)
+# reload(convert_data)
 
 class streamlit_app:
     def __init__(self):
