@@ -175,7 +175,7 @@ class split_train_test:
 
 if __name__ == "__main__":
     # 分析対象にできる、充分にデータが集まったポケモンのリストを作る
-    object_poke_list = pd.read_csv("./data/intermediate/1_preprocessed/major_poke.csv")["poke_name"]
+    object_poke_list = pd.read_csv("./data/intermediate/1_preprocessed/enough_data_poke.csv")["poke_name"]
     
     for poke_name in object_poke_list:
         # 分析対象とする各ポケモンについて、学習とテストを行う

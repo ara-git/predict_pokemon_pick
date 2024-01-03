@@ -5,15 +5,28 @@ import collections
 
 
 class convert_data:
-    def __init__(self) -> None:
+    def __init__(self, mode = "json_mode", streamlit_input = None) -> None:
+        """
+        対戦データ（jsonファイル）を予測モデルに渡せるように、DataFrameに変換し、csvファイルで出力する。
+        また、Streamlitで入力した実際の対戦データも同様に、Dataframeに変換する。
+        Args    
+            mode: このクラスを実行するモード。"json_mode"はjsonファイルをcsvで出力する用。"streamlit_mode"はstreamlitを入力としたとき用。
+        """
+        # 入力を整理
+        self.mode = mode
+        self.streamlit_input = streamlit_input
+
         # jsonファイルを読み込む
         self._read_json_files()
 
-        # 計算対象とする、データが十分に集まったポケモンを調べる
-        self._extract_major_poke()
-
-        print("データが十分に集まったポケモン:", self.major_poke_list)
-        return
+        if self.mode == "json_mode":
+            # 計算対象とする、データが十分に集まったポケモンを調べる
+            self._extract_enough_data_poke()
+            print("データが十分に集まったポケモン:", self.enough_data_poke_list)
+        elif self.mode == "streamlit_mode":
+            # "streamlit_mode"の時、jsonファイルの代わりに、streamlitの入力を使う（"self.pick_and_party"を上書きする）
+            self.pick_and_party = self.streamlit_input    
+            print(self.pick_and_party)
 
     def _read_json_files(self):
         """JSONファイルを読み込む"""
@@ -32,7 +45,6 @@ class convert_data:
         self.all_types = all_types["all_types"]
 
         # 選出
-        # JSONファイルを読み込む
         with open(
             "./data/intermediate/0_original/pick_and_party_data.json",
             "r",
@@ -106,7 +118,7 @@ class convert_data:
             poke_name = "tatsugiri"
         return poke_name
 
-    def _extract_major_poke(self):
+    def _extract_enough_data_poke(self):
         """
         データが十分に集まったポケモンを抽出する
         """
@@ -118,17 +130,17 @@ class convert_data:
         # データ数の辞書に直す
         poke_dict = collections.Counter(poke_list)
 
-        major_poke_list = []
+        enough_data_poke_list = []
 
         for key, value in poke_dict.items():
             # データが50個以上存在しているなら、計算対象とする
             if value >= 50:
-                major_poke_list.append(key)
+                enough_data_poke_list.append(key)
 
-        self.major_poke_list = major_poke_list
+        self.enough_data_poke_list = enough_data_poke_list
 
         # csvファイルとして保存する
-        pd.DataFrame(self.major_poke_list, columns = ["poke_name"]).to_csv("./data/intermediate/1_preprocessed/major_poke.csv")
+        pd.DataFrame(self.enough_data_poke_list, columns = ["poke_name"]).to_csv("./data/intermediate/1_preprocessed/enough_data_poke.csv")
 
     def make_DataFrame(self, poke_name):
         """
@@ -149,70 +161,80 @@ class convert_data:
 
         # 対戦単位ごとに読み込み、特徴量を作成する
         for data_index, data in self.pick_and_party.items():
-            # 構築に入っているかどうかを判定
-            if poke_name in data["opponent_party"]:
+            # "json_mode"の時は、分析対象のポケモンが相手構築に入っているかどうかを判定。"streamlit_mode"の時は、絶対実行。
+            if self.mode == "json_mode" and poke_name not in data["opponent_party"]:
+                continue
+            """
+            jsonファイルは教師データ（答えデータ）が付属しているので、答えの列を追加する
+            """
+            if self.mode == "json_mode":
                 "選出されたかどうか"
                 picked_TF = int(poke_name in data["opponent_pick"])
 
                 "初手に選出されたかどうか"
                 start_picked_TF = int(poke_name in data["opponent_start_pick"])
 
-                "自構築内のタイプの数をカウントする"
-                type_count_dict = dict(zip(self.all_types, [0] * len(self.all_types)))
-                for my_poke in data["my_party"]:
-                    my_poke_type = self._get_type(my_poke)
-                    for each_my_poke_type in my_poke_type:
-                        # タイプのvalueを加算する
-                        type_count_dict[each_my_poke_type] += 1
+            "自構築内のタイプの数をカウントする"
+            type_count_dict = dict(zip(self.all_types, [0] * len(self.all_types)))
+            for my_poke in data["my_party"]:
+                my_poke_type = self._get_type(my_poke)
+                for each_my_poke_type in my_poke_type:
+                    # タイプのvalueを加算する
+                    type_count_dict[each_my_poke_type] += 1
 
-                "素早さ種族値について"
-                my_team_speed_list = []
-                for my_poke in data["my_party"]:
-                    my_poke_speed = self._get_speed(my_poke)
-                    my_team_speed_list.append(my_poke_speed)
+            "素早さ種族値について"
+            my_team_speed_list = []
+            for my_poke in data["my_party"]:
+                my_poke_speed = self._get_speed(my_poke)
+                my_team_speed_list.append(my_poke_speed)
 
-                # 最大値
-                max_speed = max(my_team_speed_list)
-                # 平均値
-                mean_speed = np.mean(my_team_speed_list)
-                # 最小値
-                min_speed = min(my_team_speed_list)
+            # 最大値
+            max_speed = max(my_team_speed_list)
+            # 平均値
+            mean_speed = np.mean(my_team_speed_list)
+            # 最小値
+            min_speed = min(my_team_speed_list)
 
-                "特定の並びの存在"
-                # パオカイリュー
-                ChienPao_Dragonite_TF = int(
-                    ("Chien-Pao" in data["my_party"])
-                    and ("Dragonite" in data["my_party"])
-                )
+            "特定の並びの存在"
+            # パオカイリュー
+            ChienPao_Dragonite_TF = int(
+                ("Chien-Pao" in data["my_party"])
+                and ("Dragonite" in data["my_party"])
+            )
 
-                # トルネウーラ
-                Tornadus_Urshifu_TF = int(
-                    ("Tornadus" in data["my_party"]) and ("Urshifu" in data["my_party"])
-                )
+            # トルネウーラ
+            Tornadus_Urshifu_TF = int(
+                ("Tornadus" in data["my_party"]) and ("Urshifu" in data["my_party"])
+            )
 
-                # カミイーユイ
-                FlutterMane_ChiYu_TF = int(
-                    ("Flutter Mane" in data["my_party"])
-                    and ("Chi-Yu" in data["my_party"])
-                )
+            # カミイーユイ
+            FlutterMane_ChiYu_TF = int(
+                ("Flutter Mane" in data["my_party"])
+                and ("Chi-Yu" in data["my_party"])
+            )
 
-                # グレンアルマイエッサン
-                Indeedee_Armarouge_TF = int(
-                    ("Indeedee-F" in data["my_party"])
-                    and ("Armarouge" in data["my_party"])
-                )
+            # グレンアルマイエッサン
+            Indeedee_Armarouge_TF = int(
+                ("Indeedee-F" in data["my_party"])
+                and ("Armarouge" in data["my_party"])
+            )
 
-            else:
-                continue
 
             "DataFrameに変換し、下に蓄積する"
-            # 選出されたかどうか
-            picked_TF_df = pd.concat([picked_TF_df, pd.DataFrame([picked_TF])])
+            # 被説明変数
+            if self.mode == "json_mode":
+                # 選出されたかどうか
+                picked_TF_df = pd.concat([picked_TF_df, pd.DataFrame([picked_TF])])
 
-            # 初手に選出されたかどうか
-            start_picked_TF_df = pd.concat(
-                [start_picked_TF_df, pd.DataFrame([start_picked_TF])]
-            )
+                # 初手に選出されたかどうか
+                start_picked_TF_df = pd.concat(
+                    [start_picked_TF_df, pd.DataFrame([start_picked_TF])]
+                )
+            elif self.mode == "streamlit_mode":
+                # streamlit_modeの時は、適当なDataFrameを入れておく
+                picked_TF_df = pd.DataFrame([None])
+                start_picked_TF_df = pd.DataFrame([None])
+                
             # タイプカウント
             type_count_df = pd.concat(
                 [type_count_df, pd.DataFrame([type_count_dict])], axis=0
@@ -241,6 +263,8 @@ class convert_data:
             )
             # 自分の構築を参考情報として残す
             my_party_df = pd.concat([my_party_df, pd.DataFrame([str(data["my_party"])])], axis=0)
+
+
 
         # 手直し
         picked_TF_df.columns = ["picked"]
@@ -280,7 +304,7 @@ class convert_data:
 if __name__ == "__main__":
     instance = convert_data()
 
-    for object_poke_name in instance.major_poke_list:
+    for object_poke_name in instance.enough_data_poke_list:
         df = instance.make_DataFrame(poke_name=object_poke_name)
         df.to_csv(
             "./data/intermediate/1_preprocessed/preprocessed_"
