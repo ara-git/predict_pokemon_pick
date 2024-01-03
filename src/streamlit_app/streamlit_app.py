@@ -69,7 +69,7 @@ class streamlit_app:
         アプリのインターフェイスを作る
         """
         # タイトル
-        st.title("ダブルバトル選出予測")
+        st.title("ポケモンSV ダブルバトル選出予測")
 
         # 自分の構築を入力する
         my_party_list = []
