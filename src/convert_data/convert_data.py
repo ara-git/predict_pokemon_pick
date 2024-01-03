@@ -5,12 +5,12 @@ import collections
 
 
 class convert_data:
-    def __init__(self, mode = "json_mode", streamlit_input = None) -> None:
+    def __init__(self, mode = "test_mode", streamlit_input = None) -> None:
         """
         対戦データ（jsonファイル）を予測モデルに渡せるように、DataFrameに変換し、csvファイルで出力する。
         また、Streamlitで入力した実際の対戦データも同様に、Dataframeに変換する。
         Args    
-            mode: このクラスを実行するモード。"json_mode"はjsonファイルをcsvで出力する用。"streamlit_mode"はstreamlitを入力としたとき用。
+            mode: このクラスを実行するモード。"test_mode"はjsonファイルをcsvで出力する用。"streamlit_mode"はstreamlitを入力としたとき用。
         """
         # 入力を整理
         self.mode = mode
@@ -19,7 +19,7 @@ class convert_data:
         # jsonファイルを読み込む
         self._read_json_files()
 
-        if self.mode == "json_mode":
+        if self.mode == "test_mode":
             # 計算対象とする、データが十分に集まったポケモンを調べる
             self._extract_enough_data_poke()
             print("データが十分に集まったポケモン:", self.enough_data_poke_list)
@@ -142,10 +142,10 @@ class convert_data:
         # csvファイルとして保存する
         pd.DataFrame(self.enough_data_poke_list, columns = ["poke_name"]).to_csv("./data/intermediate/1_preprocessed/enough_data_poke.csv")
 
-    def make_DataFrame(self, poke_name):
+    def make_DataFrame(self, poke_name = None):
         """
         対戦データをDataframe形式に変換する
-        poke_name: 分析対象（選出予測する対象となる）ポケモン
+        poke_name: 分析対象（選出予測する対象となる）ポケモン streamlit_modeにおいては不要になるので、無駄な入力を省けるように、デフォルト値はNoneとして設定しておく
         """
         picked_TF_df = pd.DataFrame([])
         start_picked_TF_df = pd.DataFrame([])
@@ -161,13 +161,13 @@ class convert_data:
 
         # 対戦単位ごとに読み込み、特徴量を作成する
         for data_index, data in self.pick_and_party.items():
-            # "json_mode"の時は、分析対象のポケモンが相手構築に入っているかどうかを判定。"streamlit_mode"の時は、絶対実行。
-            if self.mode == "json_mode" and poke_name not in data["opponent_party"]:
+            # "test_mode"の時は、分析対象のポケモンが相手構築に入っているかどうかを判定。"streamlit_mode"の時は、絶対実行。
+            if self.mode == "test_mode" and poke_name not in data["opponent_party"]:
                 continue
             """
             jsonファイルは教師データ（答えデータ）が付属しているので、答えの列を追加する
             """
-            if self.mode == "json_mode":
+            if self.mode == "test_mode":
                 "選出されたかどうか"
                 picked_TF = int(poke_name in data["opponent_pick"])
 
@@ -222,7 +222,7 @@ class convert_data:
 
             "DataFrameに変換し、下に蓄積する"
             # 被説明変数
-            if self.mode == "json_mode":
+            if self.mode == "test_mode":
                 # 選出されたかどうか
                 picked_TF_df = pd.concat([picked_TF_df, pd.DataFrame([picked_TF])])
 

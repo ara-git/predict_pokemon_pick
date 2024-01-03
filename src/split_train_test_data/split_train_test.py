@@ -9,8 +9,15 @@ import pickle
 import lightgbm as lgb
 
 class split_train_test:
-    def __init__(self, poke_name):
+    def __init__(self, poke_name,  predict_object_column = "start_pick"):
+        """
+        Args
+            poke_name: 分析（予測）対象とするポケモンの名前
+        """        
+        # 入力を整理
+        self.predict_object_column = predict_object_column 
         self.poke_name = poke_name
+
         # csvファイルを読み込む
         self._read_csv()
 
@@ -22,20 +29,19 @@ class split_train_test:
         """
         self.df = pd.read_csv("./data/intermediate/1_preprocessed/preprocessed_" + self.poke_name + ".csv", index_col = 0)
 
-    def split_data(self, test_size = 0.2, predict_object_column = "start_pick"):
+    def split_data(self, test_size = 0.2):
         """
         データを分割し、学習データとテストデータとする
         Args
             test_size: テストデータのサイズ
             predict_object_column: 予測対象とする列（デフォルトは先発）
         """
-        self.predict_object_column = predict_object_column 
         # 説明変数を選択(不要な列を削除)
         X = self.df.drop(['start_pick', "picked", "my_party"] ,axis=1)
         X = self.df.drop(['start_pick', "picked", "my_party", "mean_speed"] ,axis=1)
         self.X = X
         # 被説明変数を選択
-        y = self.df.loc[:, predict_object_column]
+        y = self.df.loc[:, self.predict_object_column]
         self.y = y
 
         # データを分割する
@@ -46,6 +52,9 @@ class split_train_test:
         scaler_X = StandardScaler()
         self.X_train = scaler_X.fit_transform(self.X_train)
         self.X_test = scaler_X.transform(self.X_test)
+
+        # 標準化に使ったScalerは保存しておく（streamitで使うため）
+        pickle.dump(scaler_X, open("./data/LR_scaler/scaler_" + str(self.poke_name) + ".pkl", "wb"))
 
     def train_data(self, model):
         """
@@ -182,13 +191,13 @@ if __name__ == "__main__":
         print("poke_name:", poke_name)
 
         # 対象のポケモンについて、インスタンスを作成
-        instance = split_train_test(poke_name)
+        instance = split_train_test(poke_name = poke_name, predict_object_column = "start_pick")
 
         # 複数モデルで学習、予測を行う
         for model in ["LR", "GBDT"]:
             print("model:", model)
             # データを分割
-            instance.split_data(predict_object_column = "start_pick")
+            instance.split_data()
             # データ学習
             instance.train_data(model)
             # 予測を行う
