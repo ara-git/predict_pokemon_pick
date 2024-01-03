@@ -31,7 +31,7 @@ class streamlit_app:
         with self.col_1:
             st.subheader("選出確率と初期選出確率")
             ## Plotlyを使って棒グラフを作成する
-            fig = px.bar(self.pred_result_df, y=["picked", "start_pick"], barmode = "group")
+            fig = px.bar(self.pred_result_df, y=["pick", "first_pick"], barmode = "group")
             fig.update_layout(    
                 xaxis=dict(title=''),
                 yaxis=dict(title=''))
@@ -77,7 +77,7 @@ class streamlit_app:
             # selectboxから入力する
             my_party_poke = st.sidebar.selectbox(
                 key = "my_party_poke" + str(i),
-                label = "自分の構築" + str(i + 1),
+                label = "自分のポケモン" + str(i + 1),
                 options = self.pokedex.keys()
             )
             my_party_list.append(my_party_poke)
@@ -94,7 +94,7 @@ class streamlit_app:
                 # selectboxから入力する
                 opponent_party_poke = st.selectbox(
                     key = "opponent_party_poke_" + str(i),
-                    label = "相手の構築" + str(i + 1),
+                    label = "相手のポケモン" + str(i + 1),
                     options = self.data_enough_poke_list
                 )
                 opponent_party_list.append(opponent_party_poke)
@@ -138,5 +138,8 @@ class streamlit_app:
      
             self.pred_result_df[predict_object_column] = pred_result_list
 
+            # ［一時的処理］列名を変える
+            self.pred_result_df.rename({"start_pick": "first_pick", "picked": "pick"}, axis = 1, inplace = True)
+            
 # アプリを実行
 instance = streamlit_app()

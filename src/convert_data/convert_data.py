@@ -113,6 +113,7 @@ class convert_data:
         if "greninja" in poke_name:
             poke_name = "greninja"
 
+        # シャリタツ
         if "tatsugiri" in poke_name:
             poke_name = "tatsugiri"
         return poke_name
