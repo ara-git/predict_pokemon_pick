@@ -11,6 +11,8 @@ import chromedriver_binary
 import time
 import pandas as pd
 import os
+from selenium.webdriver.common.alert import Alert
+
 
 # options.add_argument("--headless")
 
@@ -21,7 +23,7 @@ def download_replay_html_from_showdown():
 
     エラーで止まりがちなので、try文で書く。
     """
-    replay_urls_df = pd.read_csv("./data/input/replay_urls.csv")
+    replay_urls_df = pd.read_csv("./data/input/flow/replay_urls.csv")
     print(replay_urls_df)
 
     # ChromeOptionsを設定
@@ -32,6 +34,7 @@ def download_replay_html_from_showdown():
     options.add_argument("--proxy-bypass-list=*")
     options.add_argument("--start-maximized")
     options.add_argument("--kiosk")
+    options.add_argument("--disable-popup-blocking")
 
     # DL先を指定する
     ## 絶対パスで指定する必要があるので、相対から変換する
@@ -61,10 +64,27 @@ def download_replay_html_from_showdown():
             # 5秒待機
             time.sleep(4)
             print(i / n)
+            try:
+                # 何かしらの操作でアラートが表示される場合
+                alert = Alert(driver)
+
+                # アラートを無視する
+                alert.dismiss()
+            except:
+                # 何もしない（アラートが表示されなかった場合や無視した場合）
+                pass
         except:
             # 5秒待機
             time.sleep(4)
-            pass
+            try:
+                # 何かしらの操作でアラートが表示される場合
+                alert = Alert(driver)
+
+                # アラートを無視する
+                alert.dismiss()
+            except:
+                # 何もしない（アラートが表示されなかった場合や無視した場合）
+                pass
 
 
 if __name__ == "__main__":

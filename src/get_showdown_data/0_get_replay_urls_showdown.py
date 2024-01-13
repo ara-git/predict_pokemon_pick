@@ -97,6 +97,6 @@ if __name__ == "__main__":
 
     # リプレイのurlをcsvで出力する
     replay_urls.to_csv(
-        "./data/flow/replay_urls.csv",
+        "./data/input/flow/replay_urls.csv",
         index=False,
     )

@@ -5,11 +5,11 @@ import collections
 
 
 class convert_data:
-    def __init__(self, mode = "test_mode", streamlit_input = None) -> None:
+    def __init__(self, mode="test_mode", streamlit_input=None) -> None:
         """
         対戦データ（jsonファイル）を予測モデルに渡せるように、DataFrameに変換し、csvファイルで出力する。
         また、Streamlitで入力した実際の対戦データも同様に、Dataframeに変換する。
-        Args    
+        Args
             mode: このクラスを実行するモード。"test_mode"はjsonファイルをcsvで出力する用。"streamlit_mode"はstreamlitを入力としたとき用。
         """
         # 入力を整理
@@ -25,7 +25,7 @@ class convert_data:
             print("データが十分に集まったポケモン:", self.enough_data_poke_list)
         elif self.mode == "streamlit_mode":
             # "streamlit_mode"の時、jsonファイルの代わりに、streamlitの入力を使う（"self.pick_and_party"を上書きする）
-            self.pick_and_party = self.streamlit_input    
+            self.pick_and_party = self.streamlit_input
 
     def _read_json_files(self):
         """JSONファイルを読み込む"""
@@ -87,7 +87,7 @@ class convert_data:
         poke_name = self._standardize_poke_name(poke_name)
 
         if poke_name in self.pokedex.keys():
-            return self.pokedex[poke_name]["abilities"].values
+            return self.pokedex[poke_name]["abilities"].values()
         else:
             print(poke_name, "は図鑑にないポケモンです")
 
@@ -116,6 +116,18 @@ class convert_data:
         # シャリタツ
         if "tatsugiri" in poke_name:
             poke_name = "tatsugiri"
+
+        # ノココッチ
+        if "dudunsparce" in poke_name:
+            poke_name = "dudunsparce"
+
+        # メブキジカ
+        if "sawsbuck" in poke_name:
+            poke_name = "sawsbuck"
+
+        if "alcremie" in poke_name:
+            poke_name = "alcremie"
+
         return poke_name
 
     def _extract_enough_data_poke(self):
@@ -140,9 +152,11 @@ class convert_data:
         self.enough_data_poke_list = enough_data_poke_list
 
         # csvファイルとして保存する
-        pd.DataFrame(self.enough_data_poke_list, columns = ["poke_name"]).to_csv("./data/intermediate/1_preprocessed/enough_data_poke.csv")
+        pd.DataFrame(self.enough_data_poke_list, columns=["poke_name"]).to_csv(
+            "./data/intermediate/1_preprocessed/enough_data_poke.csv"
+        )
 
-    def make_DataFrame(self, poke_name = None):
+    def make_DataFrame(self, poke_name=None):
         """
         対戦データをDataframe形式に変換する
         poke_name: 分析対象（選出予測する対象となる）ポケモン streamlit_modeにおいては不要になるので、無駄な入力を省けるように、デフォルト値はNoneとして設定しておく
@@ -158,6 +172,7 @@ class convert_data:
         FlutterMane_ChiYu_df = pd.DataFrame([])
         Indeedee_Armarouge_df = pd.DataFrame([])
         my_party_df = pd.DataFrame([])
+        competitive_defiant_df = pd.DataFrame([])
 
         # 対戦単位ごとに読み込み、特徴量を作成する
         for data_index, data in self.pick_and_party.items():
@@ -198,8 +213,7 @@ class convert_data:
             "特定の並びの存在"
             # パオカイリュー
             ChienPao_Dragonite_TF = int(
-                ("Chien-Pao" in data["my_party"])
-                and ("Dragonite" in data["my_party"])
+                ("Chien-Pao" in data["my_party"]) and ("Dragonite" in data["my_party"])
             )
 
             # トルネウーラ
@@ -209,16 +223,13 @@ class convert_data:
 
             # カミイーユイ
             FlutterMane_ChiYu_TF = int(
-                ("Flutter Mane" in data["my_party"])
-                and ("Chi-Yu" in data["my_party"])
+                ("Flutter Mane" in data["my_party"]) and ("Chi-Yu" in data["my_party"])
             )
 
             # グレンアルマイエッサン
             Indeedee_Armarouge_TF = int(
-                ("Indeedee-F" in data["my_party"])
-                and ("Armarouge" in data["my_party"])
+                ("Indeedee-F" in data["my_party"]) and ("Armarouge" in data["my_party"])
             )
-
 
             "DataFrameに変換し、下に蓄積する"
             # 被説明変数
@@ -234,7 +245,7 @@ class convert_data:
                 # streamlit_modeの時は、適当なDataFrameを入れておく
                 picked_TF_df = pd.DataFrame([None])
                 start_picked_TF_df = pd.DataFrame([None])
-                
+
             # タイプカウント
             type_count_df = pd.concat(
                 [type_count_df, pd.DataFrame([type_count_dict])], axis=0
@@ -247,6 +258,23 @@ class convert_data:
             )
             # 素早さ最小値
             min_speed_df = pd.concat([min_speed_df, pd.DataFrame([min_speed])], axis=0)
+
+            # 特性
+            competitive_defiant_count = 0
+
+            for my_poke in data["my_party"]:
+                # 自構築を一匹ずつ見ていく
+                ability_list = self._get_abilities(my_poke)
+
+                # "まけんき"か"かちき"を持っているポケモンの数
+                competitive_defiant_count += int(
+                    "Competitive" in ability_list or "Defiant" in ability_list
+                )
+
+            competitive_defiant_df = pd.concat(
+                [competitive_defiant_df, pd.DataFrame([competitive_defiant_count])],
+                axis=0,
+            )
 
             # 特定の並び
             ChienPao_Dragonite_df = pd.concat(
@@ -261,10 +289,11 @@ class convert_data:
             Indeedee_Armarouge_df = pd.concat(
                 [Indeedee_Armarouge_df, pd.DataFrame([Indeedee_Armarouge_TF])]
             )
+
             # 自分の構築を参考情報として残す
-            my_party_df = pd.concat([my_party_df, pd.DataFrame([str(data["my_party"])])], axis=0)
-
-
+            my_party_df = pd.concat(
+                [my_party_df, pd.DataFrame([str(data["my_party"])])], axis=0
+            )
 
         # 手直し
         picked_TF_df.columns = ["picked"]
@@ -291,7 +320,8 @@ class convert_data:
                 Tornadus_Urshifu_df,
                 FlutterMane_ChiYu_df,
                 Indeedee_Armarouge_df,
-                my_party_df
+                competitive_defiant_df,
+                my_party_df,
             ],
             axis=1,
         )

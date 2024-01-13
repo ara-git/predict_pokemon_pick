@@ -8,14 +8,15 @@ from sklearn.metrics import confusion_matrix
 import pickle
 import lightgbm as lgb
 
+
 class split_train_test:
-    def __init__(self, poke_name,  predict_object_column = "start_pick"):
+    def __init__(self, poke_name, predict_object_column="start_pick"):
         """
         Args
             poke_name: 分析（予測）対象とするポケモンの名前
-        """        
+        """
         # 入力を整理
-        self.predict_object_column = predict_object_column 
+        self.predict_object_column = predict_object_column
         self.poke_name = poke_name
 
         # csvファイルを読み込む
@@ -27,9 +28,14 @@ class split_train_test:
         Args
             poke_name: 対象とするポケモン名
         """
-        self.df = pd.read_csv("./data/intermediate/1_preprocessed/preprocessed_" + self.poke_name + ".csv", index_col = 0)
+        self.df = pd.read_csv(
+            "./data/intermediate/1_preprocessed/preprocessed_"
+            + self.poke_name
+            + ".csv",
+            index_col=0,
+        )
 
-    def split_data(self, test_size = 0.2):
+    def split_data(self, test_size=0.2):
         """
         データを分割し、学習データとテストデータとする
         Args
@@ -37,24 +43,29 @@ class split_train_test:
             predict_object_column: 予測対象とする列（デフォルトは先発）
         """
         # 説明変数を選択(不要な列を削除)
-        X = self.df.drop(['start_pick', "picked", "my_party"] ,axis=1)
-        X = self.df.drop(['start_pick', "picked", "my_party", "mean_speed"] ,axis=1)
+        X = self.df.drop(["start_pick", "picked", "my_party"], axis=1)
+        X = self.df.drop(["start_pick", "picked", "my_party", "mean_speed"], axis=1)
         self.X = X
         # 被説明変数を選択
         y = self.df.loc[:, self.predict_object_column]
         self.y = y
 
         # データを分割する
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size = test_size, random_state = 0) 
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+            X, y, test_size=test_size, random_state=0
+        )
 
     def _standardize_data(self):
-        #説明変数は標準化しておく(あとで回帰係数を比較するため)
+        # 説明変数は標準化しておく(あとで回帰係数を比較するため)
         scaler_X = StandardScaler()
         self.X_train = scaler_X.fit_transform(self.X_train)
         self.X_test = scaler_X.transform(self.X_test)
 
         # 標準化に使ったScalerは保存しておく（streamitで使うため）
-        pickle.dump(scaler_X, open("./data/LR_scaler/scaler_" + str(self.poke_name) + ".pkl", "wb"))
+        pickle.dump(
+            scaler_X,
+            open("./data/LR_scaler/scaler_" + str(self.poke_name) + ".pkl", "wb"),
+        )
 
     def train_data(self, model):
         """
@@ -73,12 +84,22 @@ class split_train_test:
         # 学習データを標準化しておく
         self._standardize_data()
 
-        #モデルの構築と学習
-        self.LR_model = LogisticRegression() 
+        # モデルの構築と学習
+        self.LR_model = LogisticRegression()
         self.LR_model.fit(self.X_train, self.y_train)
-        
+
         # pklファイルとして出力する
-        pickle.dump(self.LR_model, open("./data/trained_models/LR_model_" + self.predict_object_column + "_" +  self.poke_name + ".pkl", 'wb'))
+        pickle.dump(
+            self.LR_model,
+            open(
+                "./data/trained_models/LR_model_"
+                + self.predict_object_column
+                + "_"
+                + self.poke_name
+                + ".pkl",
+                "wb",
+            ),
+        )
 
     def _train_data_GBDT(self):
         """
@@ -87,27 +108,30 @@ class split_train_test:
         # LightGBM のハイパーパラメータ
         params = {
             # 二値分類問題
-            'objective': 'binary',
+            "objective": "binary",
             # AUC の最大化を目指す
-            'metric': 'auc',
+            "metric": "auc",
             # Fatal の場合出力
-            'verbosity': -1,
+            "verbosity": -1,
         }
 
         # 訓練データを更に、LightGBM用の訓練データとテストデータに分割する
-        X_train, X_test, y_train, y_test = train_test_split(self.X_train, self.y_train, test_size = 0.3)
+        X_train, X_test, y_train, y_test = train_test_split(
+            self.X_train, self.y_train, test_size=0.3
+        )
 
         # データセットを生成する
         lgb_train = lgb.Dataset(X_train, y_train)
         lgb_eval = lgb.Dataset(X_test, y_test, reference=lgb_train)
 
         # 上記のパラメータでモデルを学習する
-        self.GBDT_model = lgb.train(params, lgb_train, valid_sets=lgb_eval,
-                        num_boost_round=1000,  # 最大イテレーション回数指定
+        self.GBDT_model = lgb.train(
+            params,
+            lgb_train,
+            valid_sets=lgb_eval,
+            num_boost_round=1000,  # 最大イテレーション回数指定
+        )
 
-                        )
-
-        
     def predict_data(self):
         """
         作成した予測モデルを使って、予測する
@@ -118,8 +142,12 @@ class split_train_test:
             self.y_pred_test = self.LR_model.predict(self.X_test)
 
         elif self.model == "GBDT":
-            self.y_pred_train = self.GBDT_model.predict(self.X_train, num_iteration=self.GBDT_model.best_iteration)
-            self.y_pred_test = self.GBDT_model.predict(self.X_test, num_iteration=self.GBDT_model.best_iteration)
+            self.y_pred_train = self.GBDT_model.predict(
+                self.X_train, num_iteration=self.GBDT_model.best_iteration
+            )
+            self.y_pred_test = self.GBDT_model.predict(
+                self.X_test, num_iteration=self.GBDT_model.best_iteration
+            )
             # 0,1に変換する
             self.y_pred_train = np.where(self.y_pred_train >= 0.5, 1, 0)
             self.y_pred_test = np.where(self.y_pred_test >= 0.5, 1, 0)
@@ -130,41 +158,59 @@ class split_train_test:
         """
         if self.model == "LR":
             "LRの係数を出力する"
-            #回帰係数を格納したpandasDataFrameの表示
-            df_coef =  pd.DataFrame({'coefficient':self.LR_model.coef_.flatten()}, index=self.X.columns)
-            df_coef['coef_abs'] = abs(df_coef['coefficient'])
-            df_coef.sort_values(by='coef_abs', ascending=True,inplace=True)
-            df_coef = df_coef.iloc[-10:,:]
+            # 回帰係数を格納したpandasDataFrameの表示
+            df_coef = pd.DataFrame(
+                {"coefficient": self.LR_model.coef_.flatten()}, index=self.X.columns
+            )
+            df_coef["coef_abs"] = abs(df_coef["coefficient"])
+            df_coef.sort_values(by="coef_abs", ascending=True, inplace=True)
+            df_coef = df_coef.iloc[-10:, :]
 
-            #グラフの作成
+            # グラフの作成
             plt.clf()
             x_pos = np.arange(len(df_coef))
 
-            fig = plt.figure(figsize=(15,6))
+            fig = plt.figure(figsize=(15, 6))
             ax1 = fig.add_subplot(1, 1, 1)
-            ax1.barh(x_pos, df_coef['coefficient'], color='b')
-            ax1.set_title('coefficient of variables',fontsize=18)
+            ax1.barh(x_pos, df_coef["coefficient"], color="b")
+            ax1.set_title("coefficient of variables", fontsize=18)
             ax1.set_yticks(x_pos)
-            ax1.set_yticks(np.arange(-1,len(df_coef.index))+0.5, minor=True)
+            ax1.set_yticks(np.arange(-1, len(df_coef.index)) + 0.5, minor=True)
             ax1.set_yticklabels(df_coef.index, fontsize=14)
-            ax1.set_xticks(np.arange(-10,11,2)/10)
-            ax1.set_xticklabels(np.arange(-10,11,2)/10,fontsize=12)
-            ax1.grid(which='minor',axis='y',color='black',linestyle='-', linewidth=1)
-            ax1.grid(which='major',axis='x',linestyle='--', linewidth=1)
-            plt.savefig("./data/LR_coef/LR_coef_" + self.predict_object_column + "_" + self.poke_name + ".jpg")
-            
+            ax1.set_xticks(np.arange(-10, 11, 2) / 10)
+            ax1.set_xticklabels(np.arange(-10, 11, 2) / 10, fontsize=12)
+            ax1.grid(which="minor", axis="y", color="black", linestyle="-", linewidth=1)
+            ax1.grid(which="major", axis="x", linestyle="--", linewidth=1)
+            plt.savefig(
+                "./data/LR_coef/LR_coef_"
+                + self.predict_object_column
+                + "_"
+                + self.poke_name
+                + ".jpg"
+            )
+
         elif self.model == "GBDT":
             "特徴量の重要度を出力する"
             # 重要度をモデルから抽出
-            importance_df = pd.DataFrame(self.GBDT_model.feature_importance(), index = self.X_train.columns, columns = ["importance"])
+            importance_df = pd.DataFrame(
+                self.GBDT_model.feature_importance(),
+                index=self.X_train.columns,
+                columns=["importance"],
+            )
             # 特に重要なものだけ抜き出す
-            importance_df.sort_values("importance", inplace = True, ascending = False)
+            importance_df.sort_values("importance", inplace=True, ascending=False)
             importance_df = importance_df.head(5)
-           
+
             # 棒グラフにして出力
             plt.clf()
-            plt.bar(x = importance_df.index, height = importance_df["importance"])
-            plt.savefig("./data/feature_importance/feature_importance_" + self.predict_object_column + "_" + self.poke_name + ".jpg")
+            plt.bar(x=importance_df.index, height=importance_df["importance"])
+            plt.savefig(
+                "./data/feature_importance/feature_importance_"
+                + self.predict_object_column
+                + "_"
+                + self.poke_name
+                + ".jpg"
+            )
 
     def evaluate_test(self):
         """
@@ -172,26 +218,40 @@ class split_train_test:
         """
         "コンフュージョンマトリックスを作成し、出力する"
         # 訓練データ
-        confusion_matrix_train = confusion_matrix(y_true=self.y_train, y_pred=self.y_pred_train)
-        confusion_matrix_train = pd.DataFrame(confusion_matrix_train, index = ["true_0", "true_1"], columns = ["pred_0", "pred_1"])
-        print('confusion matrix for train data = \n', confusion_matrix_train)
+        confusion_matrix_train = confusion_matrix(
+            y_true=self.y_train, y_pred=self.y_pred_train
+        )
+        confusion_matrix_train = pd.DataFrame(
+            confusion_matrix_train,
+            index=["true_0", "true_1"],
+            columns=["pred_0", "pred_1"],
+        )
+        print("confusion matrix for train data = \n", confusion_matrix_train)
 
-        #テストデータ
-        confusion_matrix_test = confusion_matrix(y_true=self.y_test, y_pred=self.y_pred_test)
-        confusion_matrix_test = pd.DataFrame(confusion_matrix_test, index = ["true_0", "true_1"], columns = ["pred_0", "pred_1"])
-        print('confusion matrix for test data = \n', confusion_matrix_test)
+        # テストデータ
+        confusion_matrix_test = confusion_matrix(
+            y_true=self.y_test, y_pred=self.y_pred_test
+        )
+        confusion_matrix_test = pd.DataFrame(
+            confusion_matrix_test,
+            index=["true_0", "true_1"],
+            columns=["pred_0", "pred_1"],
+        )
+        print("confusion matrix for test data = \n", confusion_matrix_test)
 
 
 if __name__ == "__main__":
     # 分析対象にできる、充分にデータが集まったポケモンのリストを作る
-    object_poke_list = pd.read_csv("./data/intermediate/1_preprocessed/enough_data_poke.csv")["poke_name"]
-    
+    object_poke_list = pd.read_csv(
+        "./data/intermediate/1_preprocessed/enough_data_poke.csv"
+    )["poke_name"]
+
     for poke_name in object_poke_list:
         # 分析対象とする各ポケモンについて、学習とテストを行う
         print("poke_name:", poke_name)
 
         # 対象のポケモンについて、インスタンスを作成
-        instance = split_train_test(poke_name = poke_name, predict_object_column = "picked")
+        instance = split_train_test(poke_name=poke_name, predict_object_column="picked")
 
         # 複数モデルで学習、予測を行う
         for model in ["LR", "GBDT"]:
@@ -202,9 +262,9 @@ if __name__ == "__main__":
             instance.train_data(model)
             # 予測を行う
             instance.predict_data()
-            # 
+            #
             instance.analyze_model()
             # 結果を評価する
-            instance.evaluate_test()
+            # instance.evaluate_test()
             #
             print("#####################")
