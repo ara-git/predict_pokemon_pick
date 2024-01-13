@@ -126,6 +126,11 @@ class streamlit_app:
             # 重複するデータは消去する（順序はそのまま）
             self.opponent_party_list = list(dict.fromkeys(self.opponent_party_list))
 
+        # アンケートフォームのurlを載せる
+        url = "https://forms.gle/e1BwjDnKu9roNiEa8"
+        link_text = "ご意見・ご感想はこちらから"
+        st.markdown(f"[{link_text}]({url})")
+
     def _predict_pick(self):
         """
         選出確率を予測する
