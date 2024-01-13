@@ -305,6 +305,7 @@ class convert_data:
         Tornadus_Urshifu_df.columns = ["Tornadus_Urshifu"]
         FlutterMane_ChiYu_df.columns = ["FlutterMane_ChiYu"]
         Indeedee_Armarouge_df.columns = ["Indeedee_Armarouge"]
+        competitive_defiant_df.columns = ["competitive_defiant"]
         my_party_df.columns = ["my_party"]
 
         # 特徴量のデータフレームを横に結合する

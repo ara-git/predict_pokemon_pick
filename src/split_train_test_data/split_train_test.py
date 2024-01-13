@@ -250,21 +250,25 @@ if __name__ == "__main__":
         # 分析対象とする各ポケモンについて、学習とテストを行う
         print("poke_name:", poke_name)
 
-        # 対象のポケモンについて、インスタンスを作成
-        instance = split_train_test(poke_name=poke_name, predict_object_column="picked")
+        # 先発、選出の両方を予測
+        for predict_object_column in ["picked", "start_pick"]:
+            # 対象のポケモンについて、インスタンスを作成
+            instance = split_train_test(
+                poke_name=poke_name, predict_object_column=predict_object_column
+            )
 
-        # 複数モデルで学習、予測を行う
-        for model in ["LR", "GBDT"]:
-            print("model:", model)
-            # データを分割
-            instance.split_data()
-            # データ学習
-            instance.train_data(model)
-            # 予測を行う
-            instance.predict_data()
-            #
-            instance.analyze_model()
-            # 結果を評価する
-            # instance.evaluate_test()
-            #
-            print("#####################")
+            # 複数モデルで学習、予測を行う
+            for model in ["LR", "GBDT"]:
+                print("model:", model)
+                # データを分割
+                instance.split_data()
+                # データ学習
+                instance.train_data(model)
+                # 予測を行う
+                instance.predict_data()
+                #
+                instance.analyze_model()
+                # 結果を評価する
+                # instance.evaluate_test()
+                #
+                print("#####################")
