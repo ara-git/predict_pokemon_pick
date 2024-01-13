@@ -55,9 +55,6 @@ class convert_data:
         """
         ポケモン名を入力として、タイプのリストを返す
         """
-        # ポケモン名を正規化
-        poke_name = self._standardize_poke_name(poke_name)
-
         if poke_name == "urshifu":
             # ウーラオスは例外処理として、3タイプ分計上
             return ["Dark", "Water", "Fighting"]
@@ -71,9 +68,6 @@ class convert_data:
         """
         ポケモン名を入力として、タイプのリストを返す
         """
-        # ポケモン名を正規化
-        poke_name = self._standardize_poke_name(poke_name)
-
         if poke_name in self.pokedex.keys():
             return self.pokedex[poke_name]["baseStats"]["spe"]
         else:
@@ -83,52 +77,10 @@ class convert_data:
         """
         ポケモン名を入力として、特性のリストを返す
         """
-        # ポケモン名を正規化
-        poke_name = self._standardize_poke_name(poke_name)
-
         if poke_name in self.pokedex.keys():
             return self.pokedex[poke_name]["abilities"].values()
         else:
             print(poke_name, "は図鑑にないポケモンです")
-
-    def _standardize_poke_name(self, poke_name):
-        """
-        ポケモンの名前を正規化する
-        """
-        # ポケモン名を正規化
-        poke_name = poke_name.replace("-", "")
-        poke_name = poke_name.replace(" ", "")
-        poke_name = poke_name.lower()
-
-        "例外処理"
-        # トリトドン
-        if "gastrodon" in poke_name:
-            poke_name = "gastrodon"
-
-        # フラージェス
-        if "florges" in poke_name:
-            poke_name = "florges"
-
-        # ゲッコウガ
-        if "greninja" in poke_name:
-            poke_name = "greninja"
-
-        # シャリタツ
-        if "tatsugiri" in poke_name:
-            poke_name = "tatsugiri"
-
-        # ノココッチ
-        if "dudunsparce" in poke_name:
-            poke_name = "dudunsparce"
-
-        # メブキジカ
-        if "sawsbuck" in poke_name:
-            poke_name = "sawsbuck"
-
-        if "alcremie" in poke_name:
-            poke_name = "alcremie"
-
-        return poke_name
 
     def _extract_enough_data_poke(self):
         """
@@ -213,22 +165,22 @@ class convert_data:
             "特定の並びの存在"
             # パオカイリュー
             ChienPao_Dragonite_TF = int(
-                ("Chien-Pao" in data["my_party"]) and ("Dragonite" in data["my_party"])
+                ("chien-Pao" in data["my_party"]) and ("dragonite" in data["my_party"])
             )
 
             # トルネウーラ
             Tornadus_Urshifu_TF = int(
-                ("Tornadus" in data["my_party"]) and ("Urshifu" in data["my_party"])
+                ("tornadus" in data["my_party"]) and ("urshifu" in data["my_party"])
             )
 
             # カミイーユイ
             FlutterMane_ChiYu_TF = int(
-                ("Flutter Mane" in data["my_party"]) and ("Chi-Yu" in data["my_party"])
+                ("fluttermane" in data["my_party"]) and ("chiyu" in data["my_party"])
             )
 
             # グレンアルマイエッサン
             Indeedee_Armarouge_TF = int(
-                ("Indeedee-F" in data["my_party"]) and ("Armarouge" in data["my_party"])
+                ("indeedeef" in data["my_party"]) and ("armarouge" in data["my_party"])
             )
 
             "DataFrameに変換し、下に蓄積する"

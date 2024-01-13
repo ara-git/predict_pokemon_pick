@@ -39,14 +39,6 @@ def retrieve_party_from_html():
             start_picked_poke_list, picked_poke_list = get_poke_pick(
                 battle_log_str, side
             )
-            # ウーラオス（"Urshifu"から始まるポケモン）はすべて、"Urshifu"として登録する
-            party_list = ["Urshifu" if "Urshifu" in x else x for x in party_list]
-            start_picked_poke_list = [
-                "Urshifu" if "Urshifu" in x else x for x in start_picked_poke_list
-            ]
-            picked_poke_list = [
-                "Urshifu" if "Urshifu" in x else x for x in picked_poke_list
-            ]
             # サイドをキー、（構築、選出、初期選出）を値とした辞書を作成
             pick_dict[side] = (party_list, picked_poke_list, start_picked_poke_list)
 
@@ -96,6 +88,8 @@ def get_party_data_from_html(battle_log_str, side):
             x.split(",")[0][9:] for x in battle_log_str.split("\n") if "|poke|p2|" in x
         ]
 
+    # ポケモン名を正規化する
+    party_list = [standardize_poke_name(poke_name) for poke_name in party_list]
     return party_list
 
 
@@ -141,7 +135,60 @@ def get_poke_pick(battle_log_str, side):
     # 複数回交代が起こると重複が起こるので、削除する
     picked_poke_list = list(set(picked_poke_list))
 
+    # ポケモン名を正規化する
+    start_picked_poke_list = [
+        standardize_poke_name(poke_name) for poke_name in start_picked_poke_list
+    ]
+    picked_poke_list = [
+        standardize_poke_name(poke_name) for poke_name in picked_poke_list
+    ]
+
     return start_picked_poke_list, picked_poke_list
+
+
+def standardize_poke_name(poke_name):
+    """
+    ポケモンの名前を正規化する
+    """
+    # ポケモン名を正規化
+    poke_name = poke_name.replace("-", "")
+    poke_name = poke_name.replace(" ", "")
+    poke_name = poke_name.lower()
+
+    "例外処理"
+    # トリトドン
+    if "gastrodon" in poke_name:
+        poke_name = "gastrodon"
+
+    # フラージェス
+    if "florges" in poke_name:
+        poke_name = "florges"
+
+    # ゲッコウガ
+    if "greninja" in poke_name:
+        poke_name = "greninja"
+
+    # シャリタツ
+    if "tatsugiri" in poke_name:
+        poke_name = "tatsugiri"
+
+    # ノココッチ
+    if "dudunsparce" in poke_name:
+        poke_name = "dudunsparce"
+
+    # メブキジカ
+    if "sawsbuck" in poke_name:
+        poke_name = "sawsbuck"
+
+    # マホイップ
+    if "alcremie" in poke_name:
+        poke_name = "alcremie"
+
+    # ウーラオス
+    if "urshifu" in poke_name:
+        poke_name = "urshifu"
+
+    return poke_name
 
 
 if __name__ == "__main__":
